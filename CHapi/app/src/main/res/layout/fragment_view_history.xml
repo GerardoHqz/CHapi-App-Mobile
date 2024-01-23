@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/deep_turquoise"
+
+        tools:context=".UI.Home.History.HistoryActivity">
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="@dimen/layout_width_leftBubbles"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_leftBubbles"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/left_bubbles" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_rightBubbles"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/right_bubbles" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_middleBubbles"
+            app:layout_constraintEnd_toStartOf="@+id/imageView10"
+            app:layout_constraintStart_toEndOf="@+id/imageView9"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/middle_bubbles" />
+
+        <TextView
+            android:id="@+id/textView_username2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tiny_gap"
+            android:layout_marginTop="@dimen/tiny_gap"
+            android:text="@string/username"
+            android:fontFamily="@font/kumbhsans"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text_size"
+            app:layout_constraintStart_toEndOf="@+id/imageView_userpp2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_welcome2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tiny_gap"
+            android:text="@string/welcome_message_string"
+            android:fontFamily="@font/kumbhsans"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/imageView_userpp2"
+            app:layout_constraintTop_toBottomOf="@+id/textView_username2" />
+
+        <ImageView
+            android:id="@+id/imageView_userpp2"
+            android:layout_width="@dimen/layout_userImage"
+            android:layout_height="@dimen/layout_userImage"
+            android:layout_marginStart="@dimen/small_gap"
+            android:layout_marginTop="@dimen/tiny_gap"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/user_pp" />
+
+        <TextView
+            android:id="@+id/textView_background_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/default_gap"
+            android:background="@drawable/background_box"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView_orangespheres2"
+            android:layout_width="@dimen/layout_width_orangeSpheres"
+            android:layout_height="@dimen/layout_height_orangeSpheres"
+            android:layout_marginStart="@dimen/sphere_corner_gap"
+            android:layout_marginBottom="@dimen/sphere_corner_gap"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/orange_spheres2"
+            tools:ignore="ImageContrastCheck" />
+
+        <Button
+            android:id="@+id/btn_action_back_HistoryToHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:fontFamily="@font/robotomonosemibold"
+            android:text="@string/back_string"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/default_gap"
+            android:padding="@dimen/medium_gap"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp">
+
+            <TextView
+                android:id="@+id/textView_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/deep_turquoise"
+                android:text="@string/history_string"
+                android:fontFamily="@font/kumbhsans"
+                android:textSize="@dimen/large_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_History"
+                android:layout_width="327dp"
+                android:layout_height="531dp"
+                android:layout_marginTop="@dimen/medium_gap"
+                android:layout_marginBottom="@dimen/default_gap"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_history"
+                app:layout_constraintVertical_bias="0.0"
+                tools:listitem="@layout/item_box">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_home"
+    app:startDestination="@id/viewHomeFragment">
+
+    <fragment
+        android:id="@+id/viewHomeFragment"
+        android:name="com.tde.chapi.UI.Home.ViewHomeFragment"
+        android:label="fragment_view_home"
+        tools:layout="@layout/fragment_view_home" >
+        <action
+            android:id="@+id/action_viewHomeFragment_to_addReminderFragment"
+            app:destination="@id/addReminderFragment" />
+        <action
+            android:id="@+id/action_viewHomeFragment_to_homeAppointmentFragment"
+            app:destination="@id/homeAppointmentFragment" />
+        <action
+            android:id="@+id/action_viewHomeFragment_to_emergencyFragment"
+            app:destination="@id/emergencyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addReminderFragment"
+        android:name="com.tde.chapi.UI.Home.Reminder.addReminderFragment"
+        tools:layout="@layout/fragment_add_reminder"
+        android:label="addReminderFragment" >
+        <action
+            android:id="@+id/action_addReminderFragment_to_viewHomeFragment"
+            app:destination="@id/viewHomeFragment" />
+        <action
+            android:id="@+id/action_addReminderFragment_to_homeAppointmentFragment"
+            app:destination="@id/homeAppointmentFragment" />
+        <action
+            android:id="@+id/action_addReminderFragment_to_emergencyFragment"
+            app:destination="@id/emergencyFragment" />
+        <action
+            android:id="@+id/action_addReminderFragment_to_viewHistoryFragment"
+            app:destination="@id/viewHistoryFragment" />
+        <action
+            android:id="@+id/action_addReminderFragment_to_typeMedicationFragment"
+            app:destination="@id/typeMedicationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeAppointmentFragment"
+        android:name="com.tde.chapi.UI.Home.Appoinment.HomeAppointmentFragment"
+        tools:layout="@layout/fragment_home_appointment"
+        android:label="HomeAppointmentFragment" >
+        <action
+            android:id="@+id/action_homeAppointmentFragment_to_viewHomeFragment"
+            app:destination="@id/viewHomeFragment" />
+        <action
+            android:id="@+id/action_homeAppointmentFragment_to_addReminderFragment"
+            app:destination="@id/addReminderFragment" />
+        <action
+            android:id="@+id/action_homeAppointmentFragment_to_emergencyFragment"
+            app:destination="@id/emergencyFragment" />
+        <action
+            android:id="@+id/action_homeAppointmentFragment_to_addAppointmentFragment1"
+            app:destination="@id/addAppointmentFragment1" />
+    </fragment>
+    <fragment
+        android:id="@+id/emergencyFragment"
+        android:name="com.tde.chapi.UI.Home.Emergency.EmergencyFragment"
+        tools:layout="@layout/fragment_emergency"
+        android:label="EmergencyFragment" >
+        <action
+            android:id="@+id/action_emergencyFragment_to_viewHomeFragment"
+            app:destination="@id/viewHomeFragment" />
+        <action
+            android:id="@+id/action_emergencyFragment_to_homeAppointmentFragment"
+            app:destination="@id/homeAppointmentFragment" />
+        <action
+            android:id="@+id/action_emergencyFragment_to_addReminderFragment"
+            app:destination="@id/addReminderFragment" />
+        <action
+            android:id="@+id/action_emergencyFragment_to_configurationFragment"
+            app:destination="@id/configurationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/configurationFragment"
+        tools:layout="@layout/fragment_configuration"
+        android:name="com.tde.chapi.UI.Home.Emergency.ConfigurationFragment"
+        android:label="ConfigurationFragment" />
+    <fragment
+        android:id="@+id/addAppointmentFragment1"
+        tools:layout="@layout/fragment_add_appointment1"
+        android:name="com.tde.chapi.UI.Home.Appoinment.AddAppointmentFragment1"
+        android:label="AddAppointmentFragment1" >
+        <action
+            android:id="@+id/action_addAppointmentFragment1_to_addAppointmentFragment"
+            app:destination="@id/addAppointmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAppointmentFragment"
+        tools:layout="@layout/fragment_add_appointment"
+        android:name="com.tde.chapi.UI.Home.Appoinment.AddAppointmentFragment"
+        android:label="AddAppointmentFragment" />
+    <fragment
+        android:id="@+id/viewHistoryFragment"
+        android:name="com.tde.chapi.UI.Home.History.ViewHistoryFragment"
+        tools:layout="@layout/fragment_view_history"
+        android:label="ViewHistoryFragment" />
+    <fragment
+        android:id="@+id/typeMedicationFragment"
+        tools:layout="@layout/fragment_type_medication"
+        android:name="com.tde.chapi.UI.Home.Reminder.TypeMedicationFragment"
+        android:label="TypeMedicationFragment" >
+        <action
+            android:id="@+id/action_typeMedicationFragment_to_medicineFragment"
+            app:destination="@id/medicineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicineFragment"
+        tools:layout="@layout/fragment_medicine"
+        android:name="com.tde.chapi.UI.Home.Reminder.MedicineFragment"
+        android:label="MedicineFragment" >
+        <action
+            android:id="@+id/action_medicineFragment_to_medicineFrequencyFragment"
+            app:destination="@id/medicineFrequencyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicineFrequencyFragment"
+        tools:layout="@layout/fragment_medicine_frequency"
+        android:name="com.tde.chapi.UI.Home.Reminder.MedicineFrequencyFragment"
+        android:label="MedicineFrequencyFragment" />
+</navigation>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.tde.chapi.viewmodel.ViewModelRemind" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/deep_turquoise"
+        tools:context=".UI.Home.Reminder.TypeMedicationFragment">
+
+
+        <ImageView
+            android:id="@+id/imageView_MiddleBubble2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_middleBubbles"
+            app:layout_constraintEnd_toStartOf="@id/imageView_RightBubble2"
+            app:layout_constraintStart_toEndOf="@id/imageView_LeftBubble2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/middle_bubbles" />
+
+        <ImageView
+            android:id="@+id/imageView_LeftBubble2"
+            android:layout_width="@dimen/layout_width_leftBubbles"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_leftBubbles"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/left_bubbles" />
+
+        <ImageView
+            android:id="@+id/imageView_RightBubble2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_rightBubbles"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/right_bubbles" />
+
+        <!-- welcome, usuario e imagen -->
+        <ImageView
+            android:id="@+id/imageView_userpp_type"
+            android:layout_width="@dimen/layout_userImage"
+            android:layout_height="@dimen/layout_userImage"
+            android:layout_marginStart="@dimen/small_gap"
+            android:layout_marginTop="@dimen/tiny_gap"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/user_pp" />
+
+        <TextView
+            android:id="@+id/textView_welcome_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tiny_gap"
+            android:text="@string/welcome_message_string"
+            android:fontFamily="@font/kumbhsans"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/imageView_userpp_type"
+            app:layout_constraintTop_toBottomOf="@+id/textView_username_type" />
+
+        <TextView
+            android:id="@+id/textView_username_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tiny_gap"
+            android:layout_marginTop="@dimen/tiny_gap"
+            android:text="@string/username"
+            android:fontFamily="@font/kumbhsans"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text_size"
+            app:layout_constraintStart_toEndOf="@id/imageView_userpp_type"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_background_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/default_gap"
+            android:background="@drawable/background_box"
+            android:padding="@dimen/default_gap"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView_twospheres"
+            android:layout_width="@dimen/layout_width_twoSpheres"
+            android:layout_height="@dimen/layout_height_twoSpheres"
+            android:layout_margin="@dimen/sphere_corner_gap"
+            android:layout_marginStart="@dimen/sphere_corner_gap"
+            android:layout_marginBottom="@dimen/sphere_corner_gap"
+            android:src="@drawable/bluespheres"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_action_back_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/back_string"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/default_gap"
+            android:padding="@dimen/default_gap"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="16dp">
+
+
+            <ImageButton
+                android:id="@+id/btn_syrup"
+                android:layout_width="@dimen/layout_width_syrup"
+                android:layout_height="@dimen/layout_height_other"
+                android:layout_marginTop="@dimen/small_gap"
+                android:background="@drawable/jarabe"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_pills" />
+
+            <TextView
+                android:id="@+id/textView_vaccination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vaccination_string"
+                android:fontFamily="@font/robotomono"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium_text_size"
+                app:layout_constraintEnd_toEndOf="@+id/btn_vaccination"
+                app:layout_constraintStart_toStartOf="@+id/btn_vaccination"
+                app:layout_constraintTop_toBottomOf="@+id/btn_vaccination" />
+
+            <ImageButton
+                android:id="@+id/btn_others"
+                android:layout_width="@dimen/layout_width_other"
+                android:layout_height="@dimen/layout_height_other"
+                android:layout_marginTop="@dimen/small_gap"
+                android:background="@drawable/otro_tipo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_vaccination" />
+
+            <TextView
+                android:id="@+id/textView_syrup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/syrup_string"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium_text_size"
+                app:layout_constraintEnd_toEndOf="@+id/btn_syrup"
+                app:layout_constraintStart_toStartOf="@+id/btn_syrup"
+                app:layout_constraintTop_toBottomOf="@+id/btn_syrup" />
+
+
+            <TextView
+                android:id="@+id/textView_pills"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pills_string"
+                android:fontFamily="@font/robotomono"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium_text_size"
+                app:layout_constraintEnd_toEndOf="@+id/btn_pills"
+                app:layout_constraintStart_toStartOf="@+id/btn_pills"
+                app:layout_constraintTop_toBottomOf="@+id/btn_pills" />
+
+            <TextView
+                android:id="@+id/textView_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/other_string"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium_text_size"
+                app:layout_constraintEnd_toEndOf="@+id/btn_others"
+                app:layout_constraintStart_toStartOf="@+id/btn_others"
+                app:layout_constraintTop_toBottomOf="@+id/btn_others" />
+
+            <TextView
+                android:id="@+id/textView_reminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:freezesText="false"
+                android:text="@string/type"
+                android:fontFamily="@font/kumbhsans"
+                android:textColor="@color/deep_turquoise"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/large_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btn_pills"
+                android:layout_width="@dimen/medtype"
+                android:layout_height="@dimen/medtype"
+                android:layout_marginTop="@dimen/medium_gap"
+                android:background="@drawable/pastillas"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_reminder" />
+
+            <ImageButton
+                android:id="@+id/btn_vaccination"
+                android:layout_width="@dimen/layout_width_vaccination"
+                android:layout_height="@dimen/layout_height_other"
+                android:layout_marginTop="@dimen/medium_gap"
+                android:background="@drawable/inyeccion"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_reminder" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

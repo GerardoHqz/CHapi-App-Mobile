@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.tde.chapi.viewmodel.ViewModelRemind" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/deep_turquoise"
+        tools:context=".UI.Home.Reminder.MedicineFragment">
+
+
+        <ImageView
+            android:id="@+id/imageView_MiddleBubble3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_middleBubbles"
+            app:layout_constraintEnd_toStartOf="@id/imageView_RightBubble3"
+            app:layout_constraintStart_toEndOf="@id/imageView_LeftBubble3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/middle_bubbles" />
+
+        <ImageView
+            android:id="@+id/imageView_LeftBubble3"
+            android:layout_width="@dimen/layout_width_leftBubbles"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_leftBubbles"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/left_bubbles" />
+
+        <ImageView
+            android:id="@+id/imageView_RightBubble3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_rightBubbles"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/right_bubbles" />
+
+
+        <ImageView
+            android:id="@+id/imageView_userpp_medicine"
+            android:layout_width="@dimen/layout_userImage"
+            android:layout_height="@dimen/layout_userImage"
+            android:layout_marginStart="@dimen/small_gap"
+            android:layout_marginTop="@dimen/tiny_gap"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/user_pp" />
+
+        <TextView
+            android:id="@+id/textView_welcome_medicine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tiny_gap"
+            android:text="@string/welcome_message_string"
+            android:fontFamily="@font/kumbhsans"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/imageView_userpp_medicine"
+            app:layout_constraintTop_toBottomOf="@+id/textView_username_medicine" />
+
+        <TextView
+            android:id="@+id/textView_username_medicine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tiny_gap"
+            android:layout_marginTop="@dimen/tiny_gap"
+            android:fontFamily="@font/kumbhsans"
+            android:text="@string/username"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text_size"
+            app:layout_constraintStart_toEndOf="@id/imageView_userpp_medicine"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView_background_medicine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/default_gap"
+            android:background="@drawable/background_box"
+            android:padding="@dimen/default_gap"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView_twospheresorange_frequency"
+            android:layout_width="@dimen/layout_width_twoSpheres"
+            android:layout_height="@dimen/layout_height_twoSpheres"
+            android:layout_margin="@dimen/sphere_corner_gap"
+            android:layout_marginStart="@dimen/sphere_corner_gap"
+            android:layout_marginBottom="@dimen/sphere_corner_gap"
+            android:src="@drawable/orange_spheres2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_action_back_medicine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/back_string"
+            android:fontFamily="@font/robotomonosemibold"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/default_gap"
+            android:padding="@dimen/default_gap"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="16dp">
+
+
+            <TextView
+                android:id="@+id/textView_medicinename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_gap"
+                android:freezesText="false"
+                android:text="@string/medicine"
+                android:fontFamily="@font/kumbhsans"
+                android:textColor="@color/deep_turquoise"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/medium_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup_unit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNumber_amount">
+
+                <RadioButton
+                    android:id="@+id/radioButton_ml"
+                    android:layout_width="@dimen/default_gap"
+                    android:layout_height="@dimen/default_gap"
+                    android:layout_marginTop="@dimen/small_gap"
+                    android:text="@string/ml_string"
+                    android:fontFamily="@font/robotoslabsemibold"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_action_next_type2"
+                    app:layout_constraintStart_toEndOf="@+id/radioButton_mg"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextNumber_amount" />
+
+                <RadioButton
+                    android:id="@+id/radioButton_tab"
+                    android:layout_width="@dimen/default_gap"
+                    android:layout_height="@dimen/default_gap"
+                    android:layout_marginTop="@dimen/small_gap"
+                    android:text="@string/tab_string"
+                    android:fontFamily="@font/robotoslabsemibold"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_action_next_type2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextNumber_amount" />
+
+                <RadioButton
+                    android:id="@+id/radioButton_mg"
+                    android:layout_width="@dimen/default_gap"
+                    android:layout_height="@dimen/default_gap"
+                    android:layout_marginStart="@dimen/tiny_gap"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/robotoslabsemibold"
+                    android:text="@string/mg_string"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_action_next_type2"
+                    app:layout_constraintStart_toEndOf="@+id/radioButton_tab"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextNumber_amount" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btn_action_next_type2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_gap"
+                android:layout_marginBottom="128dp"
+                android:backgroundTint="@color/orange"
+                android:padding="@dimen/small_gap"
+                android:fontFamily="@font/robotomono"
+                app:cornerRadius="@dimen/cornerRadius_Button"
+                android:text="@string/next_string"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextMedicine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_gap"
+                android:background="@drawable/custom_input"
+                android:hint="@string/medicine"
+                android:fontFamily="@font/robotomono"
+                android:paddingStart="@dimen/small_gap"
+                android:paddingEnd="@dimen/small_gap"
+                android:textSize="@dimen/text_size"
+                android:text="@={viewModel.name}"
+                app:layout_constraintTop_toBottomOf="@+id/textView_medicinename"
+                tools:layout_editor_absoluteX="60dp" />
+
+            <TextView
+                android:id="@+id/textView_medicineamount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_gap"
+                android:fontFamily="@font/kumbhsans"
+                android:text="@string/medicineamount"
+                android:textColor="@color/deep_turquoise"
+                android:textSize="@dimen/medium_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextMedicine" />
+
+            <EditText
+                android:id="@+id/editTextNumber_amount"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_gap"
+                android:background="@drawable/custom_input"
+                android:hint="@string/dose_quantity"
+                android:fontFamily="@font/robotomono"
+                android:paddingStart="@dimen/small_gap"
+                android:paddingEnd="@dimen/small_gap"
+                android:textSize="@dimen/text_size"
+                android:text="@={viewModel.many}"
+                android:inputType="number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_medicineamount" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

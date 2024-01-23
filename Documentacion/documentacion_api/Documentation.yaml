@@ -1,0 +1,871 @@
+openapi: 3.0.1
+info:
+  title: API de CHapi
+  description: Esta API se encargara de todos los servicios.
+  version: 1.0.0
+servers:
+- url: https://CHapi
+tags:
+- name: Usuario
+- name: Recordatorio Medicamentos
+- name: Recordatorio Consulta
+- name: Contacto Emergencia
+- name: Gestion Medicamentos
+
+paths:
+  /users:
+    get:
+      tags:
+      - Usuario
+      summary: Obtiene la infomación de todos los usuarios.
+      parameters:
+      - $ref: '#/components/parameters/token'
+      responses:
+        200:
+          description: (OK) La información de los usuarios se obtuvo correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+  /users/{username}:
+    get:
+      tags:
+      - Usuario
+      summary: Obtiene la infomación de un usuario en especifico.
+      parameters:
+      - $ref: '#/components/parameters/token'
+      - name: username
+        in: path
+        description: Identificador del usuario a obtener.
+        required: true
+      responses:
+        200:
+          description: (OK) La información de los usuarios se obtuvo correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+  /user/create:
+    post:
+      tags:
+      - Usuario
+      summary: Inserta información de nuevo usuario 
+      parameters:
+      - $ref: '#/components/parameters/token'
+  
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BodyUsersPost'
+        required: true
+      responses:
+        200:
+          description: (OK) La información del usuario se guardo correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+  /user/update/{username}:
+    put:
+      tags:
+      - Usuario
+      summary: Actualiza la informacion de un usuario.
+      parameters:
+      - $ref: '#/components/parameters/token'
+      - name: username
+        in: path
+        description: Identificador del cliente a obtener
+        required: true
+        schema:
+          type: string
+          
+      requestBody:
+        content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BodyUsersPut'
+        
+      responses:
+        200:
+          description: (OK) La información del cliente se actualizÃ³ correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+  /user/state/{username}:
+    delete:
+      tags:
+      - Usuario
+      summary:  Elimina un usuario
+      parameters:
+      - $ref: '#/components/parameters/token'
+      - name: username
+        in: path
+        description: Identificador del usuario a obtener
+        required: true
+        schema:
+          type: string
+          
+      responses:
+        200:
+          description: (OK) La información del cliente se actualizÃ³ correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+      
+  /reminds/:
+    get:
+      tags:
+      - Recordatorio Medicamentos
+      summary: Obtiene la infomación de todos los recordatorios del usuario.
+      parameters:
+      - $ref: '#/components/parameters/token'
+      responses:
+        200:
+          description: (OK) Los recordatorios del usuario se obtuvieron correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+  /reminds/{idRemind}:
+    get:
+      tags:
+      - Recordatorio Medicamentos
+      summary: Obtiene la informacion de un recordatorio especifico.
+      parameters:
+      - $ref: '#/components/parameters/token'
+      - name: idRemind
+        in: path
+        description: Identificador del recordatorio
+        required: true
+      responses:
+        200:
+          description: (OK) Los recordatorios del usuario se obtuvieron correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+  /reminds/uer/{username}:
+    get:
+      tags:
+      - Recordatorio Medicamentos
+      summary: Obtiene todos los recordatorios de un usuario
+      parameters:
+      - $ref: '#/components/parameters/token'
+      - name: username
+        in: path
+        description: Identificador del recordatorio
+        required: true
+      responses:
+        200:
+          description: (OK) Los recordatorios del usuario se obtuvieron correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+  /reminds/create:
+    post:
+      tags:
+      - Recordatorio Medicamentos
+      summary: Crea un nuevo recordatorio de medicamentos
+      parameters:
+      - $ref: '#/components/parameters/token'
+  
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BodyRemindPost'
+        required: true
+      responses:
+        200:
+          description: (OK) El recordatorio ha sido creado correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+  /remid/update/{idRemind}:
+    put:
+      tags:
+      - Recordatorio Medicamentos
+      summary: Actualiza la informacion de un recordatorio.
+      parameters:
+      - $ref: '#/components/parameters/token'
+      - name: idRemind
+        in: path
+        description: Identificador del recordatorio
+        required: true
+        schema:
+          type: string
+          
+      requestBody:
+        content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BodyRemindPut'
+        
+      responses:
+        200:
+          description: (OK) La información del recordaotrio se actualizo correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+  /reminds/{idRemind}/toogle:
+    delete:
+      tags:
+        - Recordatorio Medicamentos
+      summary: Elimina un recordatorio del usuario
+      parameters:
+      - $ref: '#/components/parameters/token'
+      - name: idRemind
+        in: path
+        description: Identificador del cliente a obtener
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: (OK) El recordatorio se elimino correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+  /consultations/:
+    get:
+      tags:
+      - Recordatorio Consulta
+      summary: Obtiene la infomación de todos los recordatorios del usuario.
+      parameters:
+      - $ref: '#/components/parameters/token'
+      responses:
+        200:
+          description: (OK) Los recordatorios del usuario se obtuvieron correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+  /consultations/{idRemind}:
+    get:
+      tags:
+      - Recordatorio Consulta
+      summary: Obtiene la informacion de un recordatorio especifico.
+      parameters:
+      - $ref: '#/components/parameters/token'
+      - name: idRemind
+        in: path
+        description: Identificador del recordatorio
+        required: true
+      responses:
+        200:
+          description: (OK) Los recordatorios del usuario se obtuvieron correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'    
+  /consultations/user/{username}:
+    get:
+      tags:
+      - Recordatorio Consulta
+      summary: Obtiene todos los recordatorios de un usuario.
+      parameters:
+      - $ref: '#/components/parameters/token'
+      - name: username
+        in: path
+        description: Identificador del recordatorio
+        required: true
+      responses:
+        200:
+          description: (OK) Los recordatorios del usuario se obtuvieron correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'      
+  
+  /remind/status/{idRemind}:
+    patch:
+      tags:
+      - Recordatorio Medicamentos
+      summary: Desactiva o activa los recordatorios
+      parameters:
+      - $ref: '#/components/parameters/token'
+      - name: idRemind
+        in: path
+        description: Identificador del usuario a obtener
+        required: true
+        schema:
+          type: string
+          
+      responses:
+        200:
+          description: (OK)  La acción se ha desarollado correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+  /consultations/create:
+    post:
+      tags:
+      - Recordatorio Consulta
+      summary: Crea un nuevo recordatorio para consulta
+      parameters:
+      - $ref: '#/components/parameters/token'
+  
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BodyConsultationPost'
+        required: true
+      responses:
+        200:
+          description: (OK) El recordatorio ha sido creado correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+  /consultations/{idConsultation}:
+    put:
+      tags:
+      - Recordatorio Consulta
+      summary: Actualiza la informacion de un recordatorio.
+      parameters:
+      - $ref: '#/components/parameters/token'
+      - name: idConsultation
+        in: path
+        description: Identificador del recordatorio
+        required: true
+        schema:
+          type: string
+          
+      requestBody:
+        content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BodyConsultationPut'
+        
+      responses:
+        200:
+          description: (OK) La información del recordaotrio se actualizo correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+  /consultations/delete/{idConsultation}:
+    delete:
+      tags:
+        - Recordatorio Consulta
+      summary: Elimina un recordatorio del usuario
+      parameters:
+      - $ref: '#/components/parameters/token'
+      - name: idConsultation
+        in: path
+        description: Identificador del recordatorio
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: (OK) El recordatorio se elimino correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+          
+  /consultations/{idConsultation}/toogle:
+    patch:
+      tags:
+      - Recordatorio Consulta
+      summary:  Desactiva o activa los recordatorios
+      parameters:
+      - $ref: '#/components/parameters/token'
+      - name: idConsultation
+        in: path
+        description: Identificador del usuario a obtener
+        required: true
+        schema:
+          type: string
+        
+      responses:
+        200:
+          description: (OK)  La acción se ha desarollado correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+  /emergencies/:
+    get:
+      tags:
+      - Contacto Emergencia
+      summary: Obtiene la infomación de un contacto.
+      parameters:
+      - $ref: '#/components/parameters/token'
+      responses:
+        200:
+          description: (OK) La información del contacto se obtuvo correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+  /emergencies/create:
+    post:
+      tags:
+      - Contacto Emergencia
+      summary: Crea un contacto de emergencia
+      parameters:
+      - $ref: '#/components/parameters/token'
+  
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BodyEmergencyPost'
+        required: true
+      responses:
+        200:
+          description: (OK) El contacto de emergencia ha sido creado correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+  /emergencies/update/{idContact}:
+    put:
+      tags:
+      - Contacto Emergencia
+      summary: Actualiza la información de un contacto .
+      parameters:
+      - $ref: '#/components/parameters/token'
+      - name: idContact
+        in: path
+        description: Identificador del usuario
+        required: true
+        schema:
+          type: string
+          
+      requestBody:
+        content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BodyEmergencyPut'
+        
+      responses:
+        200:
+          description: (OK) La información del contacto se actualizo correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+          
+  /emergencies/delete/{idContact}:
+    delete:
+      tags:
+        - Contacto Emergencia
+      summary: Elimina el contacto de emergencia
+      parameters:
+      - $ref: '#/components/parameters/token'
+      - name: idContact
+        in: path
+        description: Identificador del cliente a obtener
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: (OK)  La acción se ha desarollado correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+  /medicines/:
+    get:
+      tags:
+      - Gestion Medicamentos
+      summary: Obtiene el nombre de todos los medicamentos.
+      parameters:
+      - $ref: '#/components/parameters/token'
+      responses:
+        200:
+          description: (OK) Los medicamentos se obtuvieron correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+  /medicines/{idMedicine}:
+    get:
+      tags:
+      - Gestion Medicamentos
+      summary: Obtiene el nombre de todos los medicamentos.
+      parameters:
+      - $ref: '#/components/parameters/token'
+      - name: idMedicine
+        in: path
+        description: Identificador del medicamento a obtener
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: (OK) Los medicamentos se obtuvieron correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+  /medicines/create:
+    post:
+      tags:
+      - Gestion Medicamentos
+      summary: Crea y agrega nuevos medicamentos a la BD
+      parameters:
+      - $ref: '#/components/parameters/token'
+  
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BodyGestMedicine'
+        required: true
+      responses:
+        200:
+          description: (OK) Medicamnento agregado exitosamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+  /medicine/update/{idMedicine}:
+    put:
+      tags:
+      - Gestion Medicamentos
+      summary: Actualiza la informacion de un medicamento.
+      parameters:
+      - $ref: '#/components/parameters/token'
+      - name: idMedicine
+        in: path
+        description: Identificador del recordatorio
+        required: true
+        schema:
+          type: string
+          
+      requestBody:
+        content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BodyGestMedicine'
+        
+      responses:
+        200:
+          description: (OK) La información del medicamento se actualizo correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+  /medicine/delete/{idMedicine}:
+    delete:
+      tags:
+        - Gestion Medicamentos
+      summary: Elimina un medicamento de la BD
+      parameters:
+      - $ref: '#/components/parameters/token'
+      - name: idMedicine
+        in: path
+        description: Identificador del cliente a obtener
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: (OK) El medicamento se elimino correctamente
+        400:
+          $ref: '#/components/responses/BadRequest'
+        401:
+          $ref: '#/components/responses/Unauthorized' 
+        404:
+          $ref: '#/components/responses/NotFound'
+        500:
+          $ref: '#/components/responses/ServerError'
+ 
+components:
+  responses:
+    
+    Unauthorized:
+      description: (Unauthorized) No hay autorización para llamar al servicio
+    
+    NotFound:
+      description: (NotFound) No se encontro información 
+    
+    BadRequest:
+      description: (Bad Request) Los datos enviados son incorrectos o hay datos obligatorios no enviados
+      
+    ServerError:
+      description: Error en servidor
+        
+
+  parameters:
+    token:
+      in: header
+      name: token
+      description: Token de autenticación en API.
+      required: true
+      schema:
+        type: string
+    
+
+  schemas:
+
+    BodyUsersPost:
+      type: object
+      properties:
+        username:
+          type: string
+          description: nickname del usuario
+        email:
+          type: string
+          description: email del usuario
+        phone:
+          type: string
+          description: número telefonico del usuario
+        password:
+          type: string
+          description: contraseña de seguridad (*minimo 8 caracteres)
+        role:
+          type: string
+          description: Tipo de usuario (user o admin)
+          
+    BodyUsersPut:
+      type: object
+      properties:
+        username:
+          type: string
+          description: nickname del usuario
+        email:
+          type: string
+          description: email del usuario
+        phone:
+          type: string
+          description: número telefonico del usuario
+        password:
+          type: string
+          description: contraseña de seguridad (*minimo 8 caracteres)
+        role:
+          type: string
+          description: Tipo de usuario (user o admin)
+          
+    BodyRemindPost:
+      type: object
+      properties:
+        nombre:
+          type: string
+          description: nombre del medicamento
+        many:
+          type: number
+          description: cantidad del medicamento
+        unit:
+          type: string
+          description: Unidad de medida del medicamento
+        type:
+          type: string
+          description: Tipo de medicamento
+        date:
+          type: string
+          description: Fecha en que se realizara el recordatorio
+        hour:
+          type: string
+          description: hora en que se realizara el recordatorio
+        frecuently:
+          type: string
+          description: frencuencia en que se repetira el recordatorio
+        activation:
+          type: boolean
+          description: especifica si el recordatorio esta activo o desactivado
+        username:
+          type: string
+          description: especifica al usuario que pertenece el recordatorio
+    
+    BodyRemindPut:
+      type: object
+      properties:
+        date:
+          type: string
+          description: Fecha en que se realizara el recordatorio
+        hour:
+          type: string
+          description: hora en que se realizara el recordatorio
+          
+    BodyConsultationPost:
+      type: object
+      properties:
+        hospital:
+          type: string
+          description: nombre del hospital
+        direction:
+          type: string
+          description: dirección del hospital o clínica
+        medical:
+          type: string
+          description: Nombre del médico (*opcional)
+        date:
+          type: string
+          description: Dia que se tendra la consulta
+        hour:
+          type: string
+          description: hora en que se realizara el recordatorio
+        activation:
+          type: boolean
+          description: si el recordatorio esta activo o desactivado
+        uername:
+          type: string
+          description: al usuario que pertenece el recordatorio
+          
+    BodyConsultationPut:
+      type: object
+      properties:
+        date:
+          type: string
+          description: Dia que se tendra la consulta
+        hour:
+          type: string
+          description: hora en que se realizara el recordatorio
+    
+    BodyEmergencyPost:
+      type: object
+      properties:
+        name:
+          type: string
+          description: nombre del contacto de emergencia
+        email: 
+          type: string
+          description: correo electrónico del contacto
+        phone:
+          type: string
+          description: numero telefonico del contacto
+          
+    BodyEmergencyPut:
+      type: object
+      properties:
+        name:
+          type: string
+          description: nombre del contacto de emergencia
+        email: 
+          type: string
+          description: correo electrónico del contacto
+        phone:
+          type: string
+          description: numero telefonico del contacto
+          
+    BodyGestMedicine:
+      type: object
+      properties:
+        name_medicine:
+          type: string
+          description: nombre del medicamento
+    
+   

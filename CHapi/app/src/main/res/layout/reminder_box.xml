@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@drawable/item_box">
+
+            <TextView
+                android:id="@+id/textView_name_medicine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tiny_gap"
+                android:fontFamily="@font/robotomonosemibold"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textSize="@dimen/medium_text_size"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/medicine_name_reminder" />
+
+            <TextView
+                android:id="@+id/textView_amount_home"
+                android:layout_width="123dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="@dimen/tiny_gap"
+                android:fontFamily="@font/robotoslab"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/small_text_size"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView_name_medicine"
+                tools:text="@string/amount_reminder"
+                />
+
+            <TextView
+                android:id="@+id/textView_time_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tiny_gap"
+                android:fontFamily="@font/robotoslab"
+                android:layout_marginStart="@dimen/tiny_gap"
+                android:textColor="@color/black"
+                android:textSize="@dimen/small_text_size"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView_amount_home"
+                tools:text="@string/time_reminder" />
+
+            <TextView
+                android:id="@+id/textView_frequency_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tiny_gap"
+                android:textColor="@color/black"
+                android:fontFamily="@font/robotoslab"
+                android:textSize="@dimen/small_text_size"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView_time_home"
+                tools:text="@string/frequency_reminder" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="62dp"
+                android:layout_height="76dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.47"
+                app:srcCompat="@drawable/alarma" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_reminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/small_gap"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/btn_action_deletemed"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btn_action_deletemed"
+                android:layout_width="@dimen/medium_gap"
+                android:layout_height="@dimen/medium_gap"
+                android:layout_marginEnd="@dimen/small_gap"
+                android:layout_marginBottom="@dimen/tiny_gap"
+                android:backgroundTint="@android:color/holo_red_light"
+                android:background="@drawable/ic_delete_"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

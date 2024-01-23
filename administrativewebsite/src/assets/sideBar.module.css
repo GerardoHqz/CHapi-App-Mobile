@@ -1,0 +1,32 @@
+html, body {
+    height:100%;
+}
+
+.sidebar {
+    width: 25%;
+    height: 100vh;
+    background: #077889;
+    position: sticky;
+    top: 0;
+}
+
+.btn {
+    background: transparent;
+    border: none;
+    border-radius: 3rem;
+    margin-bottom: 1.5rem;
+    height: 3.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #66ccdc;
+    color: black;
+}
+
+.btn:active::after {
+    background-color: #4ea8b6;
+    color: black;
+}

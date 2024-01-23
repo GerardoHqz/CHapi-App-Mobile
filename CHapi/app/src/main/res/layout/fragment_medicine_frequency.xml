@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.tde.chapi.viewmodel.ViewModelRemind" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/deep_turquoise"
+        tools:context=".UI.Home.Reminder.MedicineFrequencyFragment">
+
+
+        <ImageView
+            android:id="@+id/imageView_MiddleBubble4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_middleBubbles"
+            app:layout_constraintEnd_toStartOf="@id/imageView_RightBubble4"
+            app:layout_constraintStart_toEndOf="@id/imageView_LeftBubble4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/middle_bubbles" />
+
+        <ImageView
+            android:id="@+id/imageView_LeftBubble4"
+            android:layout_width="@dimen/layout_width_leftBubbles"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_leftBubbles"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/left_bubbles" />
+
+        <ImageView
+            android:id="@+id/imageView_RightBubble4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_rightBubbles"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/right_bubbles" />
+
+        <ImageView
+            android:id="@+id/imageView_userpp_frequency"
+            android:layout_width="@dimen/layout_userImage"
+            android:layout_height="@dimen/layout_userImage"
+            android:layout_marginStart="@dimen/small_gap"
+            android:layout_marginTop="@dimen/tiny_gap"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/user_pp"
+            android:contentDescription="usuario" />
+
+        <TextView
+            android:id="@+id/textView_welcome_frequency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tiny_gap"
+            android:text="@string/welcome_message_string"
+            android:fontFamily="@font/kumbhsans"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/imageView_userpp_frequency"
+            app:layout_constraintTop_toBottomOf="@+id/textView_username_frequency" />
+
+        <TextView
+            android:id="@+id/textView_username_frequency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tiny_gap"
+            android:layout_marginTop="@dimen/tiny_gap"
+            android:text="@string/username"
+            android:fontFamily="@font/kumbhsans"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text_size"
+            app:layout_constraintStart_toEndOf="@id/imageView_userpp_frequency"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_background_frequency"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/default_gap"
+            android:background="@drawable/background_box"
+            android:padding="@dimen/default_gap"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView_twospheres_frequency"
+            android:layout_width="@dimen/layout_width_twoSpheres"
+            android:layout_height="@dimen/layout_height_twoSpheres"
+            android:layout_margin="@dimen/sphere_corner_gap"
+            android:layout_marginStart="@dimen/sphere_corner_gap"
+            android:layout_marginBottom="@dimen/sphere_corner_gap"
+            android:src="@drawable/bluespheres"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_action_back_frequency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/back_string"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="52dp"
+            android:padding="@dimen/default_gap"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="163dp">
+
+            <TextView
+                android:id="@+id/textView_startdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:freezesText="false"
+                android:text="@string/startdate"
+                android:fontFamily="@font/kumbhsans"
+                android:textColor="@color/deep_turquoise"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/medium_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextTime"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/default_gap"
+                android:layout_marginTop="@dimen/tiny_gap"
+                android:background="@drawable/custom_input"
+                android:clickable="false"
+                android:drawablePadding="@dimen/small_gap"
+                android:focusable="false"
+                android:hint="@string/hint_time"
+                android:fontFamily="@font/robotomono"
+                android:inputType="time"
+                android:paddingStart="@dimen/small_gap"
+                android:paddingEnd="@dimen/small_gap"
+                android:textColorHint="#757575"
+                android:textSize="@dimen/text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn_action_DatePicker_hour"
+                app:layout_constraintTop_toBottomOf="@+id/textView_time" />
+
+            <ImageButton
+                android:id="@+id/btn_action_DatePicker_hour"
+                android:layout_width="@dimen/default_gap"
+                android:layout_height="@dimen/default_gap"
+                android:layout_marginTop="@dimen/tiny_gap"
+                android:backgroundTint="@color/orange_light"
+                android:clickable="false"
+                android:contentDescription="@string/hour_string"
+                android:focusable="false"
+                android:src="@drawable/ic_time"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_time" />
+
+            <ImageButton
+                android:id="@+id/btn_action_DatePicker_date"
+                android:layout_width="@dimen/default_gap"
+                android:layout_height="@dimen/default_gap"
+                android:layout_marginTop="@dimen/tiny_gap"
+                android:backgroundTint="@color/orange_light"
+                android:clickable="false"
+                android:contentDescription="@string/date_string"
+                android:focusable="false"
+                android:src="@drawable/ic_calendar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_startdate" />
+
+            <EditText
+                android:id="@+id/editTextDate"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/default_gap"
+                android:layout_marginTop="@dimen/tiny_gap"
+                android:background="@drawable/custom_input"
+                android:clickable="false"
+                android:drawablePadding="@dimen/small_gap"
+                android:focusable="false"
+                android:hint="@string/hint_date"
+                android:fontFamily="@font/robotomono"
+                android:paddingStart="@dimen/small_gap"
+                android:paddingEnd="@dimen/small_gap"
+                android:textColorHint="#757575"
+                android:textSize="@dimen/text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn_action_DatePicker_date"
+                app:layout_constraintTop_toBottomOf="@+id/textView_startdate" />
+
+            <TextView
+                android:id="@+id/textView_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_gap"
+                android:freezesText="false"
+                android:text="@string/time"
+                android:fontFamily="@font/kumbhsans"
+                android:textColor="@color/deep_turquoise"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/medium_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_action_DatePicker_date" />
+
+            <Button
+                android:id="@+id/btn_action_savereminder"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_gap"
+                android:layout_marginBottom="92dp"
+                android:backgroundTint="@color/orange"
+                app:cornerRadius="@dimen/cornerRadius_Button"
+                android:text="@string/save_string"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_frequency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_gap"
+                android:text="@string/frequency"
+                android:fontFamily="@font/kumbhsans"
+                android:textColor="@color/deep_turquoise"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/medium_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_action_DatePicker_hour" />
+
+            <TextView
+                android:id="@+id/textView_frequency2"
+                android:layout_width="59dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/kumbhsans"
+                android:text="@string/each_string"
+                android:textColor="@color/black"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/medium_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_frequency" />
+
+            <NumberPicker
+                android:id="@+id/numberPicker"
+                android:layout_width="63dp"
+                android:layout_height="109dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toEndOf="@+id/textView_frequency2"
+                app:layout_constraintTop_toBottomOf="@+id/textView_frequency" />
+
+            <NumberPicker
+                android:id="@+id/numberPicker_type"
+                android:layout_width="63dp"
+                android:layout_height="109dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toEndOf="@+id/numberPicker"
+                app:layout_constraintTop_toBottomOf="@+id/textView_frequency" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

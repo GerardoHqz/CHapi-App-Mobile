@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.tde.chapi.viewmodel.ViewModelConsultation" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/deep_turquoise"
+        tools:context=".UI.Appoinment.AddAppointmentActivity">
+
+        <ImageView
+            android:id="@+id/imageView_LeftBubbles"
+            android:layout_width="@dimen/layout_width_leftBubbles"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_leftBubbles"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/left_bubbles" />
+
+        <ImageView
+            android:id="@+id/imageView_RightBubbles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_rightBubbles"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/right_bubbles" />
+
+        <ImageView
+            android:id="@+id/imageView_MiddleBubbles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_middleBubbles"
+            app:layout_constraintEnd_toStartOf="@+id/imageView_RightBubbles"
+            app:layout_constraintStart_toEndOf="@+id/imageView_LeftBubbles"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/middle_bubbles" />
+
+        <TextView
+            android:id="@+id/textView_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tiny_gap"
+            android:layout_marginTop="@dimen/tiny_gap"
+            android:text="@string/username"
+            android:fontFamily="@font/kumbhsans"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text_size"
+            app:layout_constraintStart_toEndOf="@+id/imageView_userpp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tiny_gap"
+            android:text="@string/welcome_message_string"
+            android:fontFamily="@font/kumbhsans"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/imageView_userpp"
+            app:layout_constraintTop_toBottomOf="@+id/textView_username" />
+
+        <ImageView
+            android:id="@+id/imageView_userpp"
+            android:layout_width="@dimen/layout_userImage"
+            android:layout_height="@dimen/layout_userImage"
+            android:layout_marginStart="@dimen/small_gap"
+            android:layout_marginTop="@dimen/tiny_gap"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/user_pp" />
+
+        <TextView
+            android:id="@+id/textView_background_addappointment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/default_gap"
+            android:background="@drawable/background_box"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView_orangespheres"
+            android:layout_width="@dimen/layout_width_Spheres"
+            android:layout_height="@dimen/layout_height_Spheres"
+            android:layout_marginStart="@dimen/sphere_corner_gap"
+            android:layout_marginBottom="@dimen/sphere_corner_gap"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/orange_spheres2"
+            tools:ignore="ImageContrastCheck" />
+
+        <Button
+            android:id="@+id/btn_action_back_AddAppointmentToHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:fontFamily="@font/robotomonosemibold"
+            android:text="@string/back_string"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/default_gap"
+            android:padding="@dimen/default_gap"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="16dp">
+
+            <TextView
+                android:id="@+id/textView_addappointment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/addappointment_string"
+                android:textColor="@color/deep_turquoise"
+                android:textSize="@dimen/large_text_size"
+                android:fontFamily="@font/kumbhsanssemibold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_gap"
+                android:fontFamily="@font/kumbhsans"
+                android:text="@string/placehospital"
+                android:textColor="@color/deep_turquoise"
+                android:textSize="@dimen/large_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_addappointment" />
+
+            <EditText
+                android:id="@+id/editText_place"
+                android:layout_width="279dp"
+                android:layout_height="59dp"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="@dimen/small_gap"
+                android:hint="@string/hint_obligatory"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingStart="@dimen/small_gap"
+                android:paddingEnd="@dimen/small_gap"
+                android:textColorHint="#757575"
+                android:textSize="@dimen/text_size"
+                android:fontFamily="@font/robotomono"
+                android:text="@={viewModel.hospital}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_place"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/textView_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_marginTop_Appointment"
+                android:text="@string/address_string"
+                android:textColor="@color/deep_turquoise"
+                android:textSize="@dimen/large_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_place" />
+
+            <EditText
+                android:id="@+id/editText_address"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_gap"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="@dimen/small_gap"
+                android:hint="@string/hint_optional"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingStart="@dimen/small_gap"
+                android:paddingEnd="@dimen/small_gap"
+                android:textColorHint="#757575"
+                android:textSize="@dimen/text_size"
+                android:fontFamily="@font/robotomono"
+                android:text="@={viewModel.direction}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_address" />
+
+            <TextView
+                android:id="@+id/textView_medic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_marginTop_Appointment"
+                android:fontFamily="@font/kumbhsans"
+                android:text="@string/medic_string"
+                android:textColor="@color/deep_turquoise"
+                android:textSize="@dimen/large_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_address" />
+
+            <EditText
+                android:id="@+id/editText_medic"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_gap"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="@dimen/small_gap"
+                android:ems="10"
+                android:fontFamily="@font/robotomono"
+                android:hint="@string/hint_optional"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingStart="@dimen/small_gap"
+                android:paddingEnd="@dimen/small_gap"
+                android:textColorHint="#757575"
+                android:textSize="@dimen/text_size"
+                android:text="@={viewModel.medical}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_medic" />
+
+            <Button
+                android:id="@+id/btn_action_continue_toAddappointment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_gap"
+                android:layout_marginBottom="92dp"
+                android:backgroundTint="@color/orange"
+                android:fontFamily="@font/robotomono"
+                android:text="@string/next_string"
+                android:textColor="#F5F5F5"
+                app:cornerRadius="@dimen/cornerRadius_Button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.391"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

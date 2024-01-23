@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/deep_turquoise"
+        tools:context=".UI.Home.ViewHomeFragment">
+
+
+        <ImageView
+            android:id="@+id/imageView_MiddleBubble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_middleBubbles"
+            app:layout_constraintEnd_toStartOf="@+id/imageView_RightBubble"
+            app:layout_constraintStart_toEndOf="@+id/imageView_LeftBubble"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/middle_bubbles" />
+
+        <ImageView
+            android:id="@+id/imageView_LeftBubble"
+            android:layout_width="@dimen/layout_width_leftBubbles"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_leftBubbles"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/left_bubbles" />
+
+        <ImageView
+            android:id="@+id/imageView_RightBubble"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_rightBubbles"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/right_bubbles" />
+
+        <TextView
+            android:id="@+id/textView_welcome_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tiny_gap"
+            android:text="@string/welcome_message_string"
+            android:fontFamily="@font/kumbhsans"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/imageView_userpp_home"
+            app:layout_constraintTop_toBottomOf="@+id/textView_username_home" />
+
+        <TextView
+            android:id="@+id/textView_username_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tiny_gap"
+            android:layout_marginTop="@dimen/tiny_gap"
+            tools:text ="username"
+            android:fontFamily="@font/kumbhsans"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text_size"
+            app:layout_constraintStart_toEndOf="@+id/imageView_userpp_home"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView_userpp_home"
+            android:layout_width="@dimen/layout_userImage"
+            android:layout_height="@dimen/layout_userImage"
+            android:layout_marginStart="@dimen/small_gap"
+            android:layout_marginTop="@dimen/tiny_gap"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/user_pp" />
+
+        <TextView
+            android:id="@+id/textView_background_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/default_gap"
+            android:background="@drawable/background_box"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/default_gap"
+            android:padding="@dimen/medium_gap"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_reminderhome"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_block"
+                android:layout_marginTop="@dimen/gap"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_date"
+                tools:listitem="@layout/reminder_box" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_appoinmenthome"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/list_block"
+                android:layout_marginTop="@dimen/gap"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.29"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_date2"
+                tools:listitem="@layout/appoinment_box" />
+
+            <TextView
+                android:id="@+id/textView_date2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap"
+                android:freezesText="false"
+                android:text="@string/recentappointments"
+                android:fontFamily="@font/kumbhsans"
+                android:textColor="@color/deep_turquoise"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/medium_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView_reminderhome" />
+
+            <TextView
+                android:id="@+id/textView_medicaments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:freezesText="false"
+                android:text="@string/date"
+                android:fontFamily="@font/kumbhsanssemibold"
+                android:textColor="@color/deep_turquoise"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/large_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textView_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap"
+                android:freezesText="false"
+                android:text="@string/recentpills"
+                android:fontFamily="@font/kumbhsans"
+                android:textColor="@color/deep_turquoise"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/medium_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_medicaments" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_gap"
+            android:layout_marginStart="@dimen/small_gap"
+            android:layout_marginEnd="@dimen/small_gap"
+            android:layout_marginBottom="@dimen/medium_gap"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corners" />
+
+            <TextView
+                android:id="@+id/textView_home_home"
+                android:layout_width="@dimen/icon_home_size"
+                android:layout_height="@dimen/icon_home_size"
+                android:layout_marginStart="@dimen/medium_gap"
+                android:background="@drawable/ic_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btn_action_reminder_home"
+                android:layout_width="@dimen/icon_home_size"
+                android:layout_height="@dimen/icon_home_size"
+                android:layout_marginStart="@dimen/icon_home_size"
+                android:background="@drawable/ic_pill"
+                android:backgroundTint="@color/dark_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView_home_home"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btn_action_appointment_home"
+                android:layout_width="@dimen/icon_home_size"
+                android:layout_height="@dimen/icon_home_size"
+                android:layout_marginEnd="@dimen/icon_home_size"
+                android:background="@drawable/ic_doctor"
+                android:backgroundTint="@color/dark_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_action_emergency_home"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btn_action_emergency_home"
+                android:layout_width="@dimen/icon_home_size"
+                android:layout_height="@dimen/icon_home_size"
+                android:layout_marginEnd="@dimen/medium_gap"
+                android:background="@drawable/ic_siren"
+                android:backgroundTint="@color/dark_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

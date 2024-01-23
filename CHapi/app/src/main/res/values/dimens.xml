@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sphere_corner_gap">-60dp</dimen>
+    <dimen name="multisphere_corner_gap">-100dp</dimen>
+    <dimen name="default_gap">60dp</dimen>
+    <dimen name="large_gap">80dp</dimen>
+    <dimen name="medium_gap">32dp</dimen>
+    <dimen name="small_gap">16dp</dimen>
+    <dimen name="gap">10dp</dimen>
+    <dimen name="tiny_gap">8dp</dimen>
+    <dimen name="text_size">14sp</dimen>
+    <dimen name="small_text_size">11sp</dimen>
+    <dimen name="medium_text_size">19sp</dimen>
+    <dimen name="icon_home_size">45dp</dimen>
+    <dimen name="large_text_size">24sp</dimen>
+    <dimen name="bubble_gap">-40dp</dimen>
+    <dimen name="insert_user_width">275dp</dimen>
+    <dimen name="insert_user_height">42dp</dimen>
+    <dimen name="medtype">120dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="list_block">240dp</dimen>
+
+    <!-- REMINDER -->
+    <dimen name="layout_marginTop_reminder">88dp</dimen>
+    <dimen name="layout_width_recyclerview_reminder">330dp</dimen>
+    <dimen name="layout_height_recyclerview_reminder">490dp</dimen>
+    <dimen name="constraintHorizontal_bias_reminder">0.489</dimen>
+    <dimen name="layout_marginTop_reminder_botton">12dp</dimen>
+    <dimen name="layout_marginStart_history_botton">24dp</dimen>
+    <!-- CONFIGURATION -->
+    <dimen name="layout_marginTop_configuration">88dp</dimen>
+    <dimen name="layout_marginEnd_configuration">16dp</dimen>
+    <dimen name="layout_marginTop_emailText">44dp</dimen>
+    <dimen name="layout_marginTop_nameText">60dp</dimen>
+    <dimen name="layout_marginTop_buttonEmergency">52dp</dimen>
+    <!-- EMERGENCY -->
+    <dimen name="layout_width_configurationButton">190dp</dimen>
+    <dimen name="layout_height_configurationButton">53dp</dimen>
+    <dimen name="layout_marginTop_configurationButton">-3dp</dimen>
+    <dimen name="layout_width_emergencyButton">301dp</dimen>
+    <dimen name="layout_height_emergencyButton">311dp</dimen>
+
+
+
+
+    <!--APPOINTMENT -->
+    <dimen name="layout_width_Spheres">246dp</dimen>
+    <dimen name="layout_height_Spheres">232dp</dimen>
+    <dimen name="layout_marginBottom_save">100dp</dimen>
+    <dimen name="cornerRadius_Button">10dp</dimen>
+    <dimen name="layout_marginTop_Appointment">30dp</dimen>
+    <dimen name="layout_height_button">50dp</dimen>
+    <dimen name="layout_width_button">50dp</dimen>
+    <dimen name="layout_marginTop_leftBubbles">-1dp</dimen>
+    <dimen name="layout_width_leftBubbles">50dp</dimen>
+    <dimen name="layout_marginTop_rightBubbles">-20dp</dimen>
+    <dimen name="layout_marginTop_middleBubbles">-12dp</dimen>
+    <dimen name="layout_userImage">45dp</dimen>
+    <dimen name="layout_marginTop_text">4dp</dimen>
+
+
+    <!--CHANGE PASSWORD -->
+    <dimen name="layout_width_orangeSpheres">189dp</dimen>
+    <dimen name="layout_height_orangeSpheres">183dp</dimen>
+    <dimen name="layout_width_multiSpheres">319dp</dimen>
+    <dimen name="layout_height_multiSpheres">284dp</dimen>
+    <dimen name="layout_width_chapiHead">166dp</dimen>
+    <dimen name="layout_height_chapiHead">120dp</dimen>
+    <dimen name="layout_marginTop_chapiHead">80dp</dimen>
+    <dimen name="layout_marginBottom_next">144dp</dimen>
+
+    <!--MEDICINE -->
+    <dimen name="layout_width_twoSpheres">264dp</dimen>
+    <dimen name="layout_height_twoSpheres">234dp</dimen>
+    <dimen name="marginBottom_next">100dp</dimen>
+    <dimen name="layout_width_other">138dp</dimen>
+    <dimen name="layout_height_other">129dp</dimen>
+    <dimen name="layout_width_vaccination">135dp</dimen>
+    <dimen name="layout_width_syrup">128dp</dimen>
+
+
+
+
+
+
+
+
+
+
+</resources>

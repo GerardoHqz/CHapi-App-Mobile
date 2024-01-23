@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+:root {
+    --primary-color: rgb(7, 136, 155);
+    --primary-color-light: rgb(134, 216, 222);
+    --secondary-color: rgb(255, 159, 90);
+    --bg-light: rgb(255, 255, 255);
+    --dark-tex: rgba(0, 0, 0);
+    --light-text: rgb(255, 255, 255);
+    --footer-bg-color: rgb(19, 26, 33);
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+
+body {
+    background: var(--primary-color);
+    padding: 0;
+    margin: 0;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/*---------- background bubbles ----------*/
+#BubbleID {
+    position:relative;  
+    z-index: 2;
+}
+
+#section {
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+/*---------- menu ----------*/
+
+nav {
+    position: absolute;
+    z-index: 2;
+    background-color: var(--bg-light);
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 1% 6%;
+    padding: 2%;
+    border-radius: 1em;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: var(--dark-tex);
+}
+
+a:hover {
+    color: var(--secondary-color);
+    transition-duration: 400ms;    
+} 
+
+/*---------- Home ----------*/
+
+main {
+    position: absolute;
+    top: 23%;
+    right: 0;
+}
+
+.title {
+    font-family: 'Modak';
+    font-size: 15vmax;
+    height: auto;
+    line-height: 0.65em;
+}
+
+.title:nth-child(1) {
+    color: var(--primary-color-light);
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 10px #FFF, 0 0 10px #aef0f5, 0 0 30px #aef0f5, 0 0 40px #aef0f5, 0 0 55px #aef0f5, 0 0 75px #aef0f5;
+}
+
+.title:nth-child(2) {
+    color: var(--secondary-color);
+    text-shadow: 0 0 5px #FFF, 0 0 5px #FFF, 0 0 5px #FFF, 0 0 1px #ffc499, 0 0 30px #ffc499, 0 0 40px #ffc499, 0 0 55px #ffc499, 0 0 75px #ffc499;
+}
+
+.grid-container-header {
+    display: grid; 
+    grid-template-columns: 40vw 55vw;
+    grid-template-rows: 20vw 5vw 6vw 6vw;
+    max-height: 100%;
+  }
+
+.item1-header, .item3-header, .item4-header, .item5-header{
+    text-align: right;
+}
+
+.item2-header{
+    grid-row-end: span 4;
+    text-align: center;
+}
+
+.item1-header, .item3-header, .item4-header{
+    align-self: flex-end;
+}
+
+/*.item3-header {
+    padding-top: 2vh;
+    font-size: 3.5vh;
+}*/
+
+#logo {
+    position:relative; 
+    max-width:70%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.link-dowland{
+    position: relative;
+    z-index: 4;
+    width: 30%;
+    margin: 0;
+    padding: 0;
+}
+
+.link-dowland:hover {
+    transform: scale(1.1);
+    transition-duration: 400ms; 
+    cursor: pointer;
+}
+
+/*---------- Description section ----------*/
+
+#description {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    background-color: var(--bg-light);
+}
+.cards {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20%;
+    flex-grow: 1;
+    background-color: var(--bg-light);
+    border-radius: 2rem;
+    margin: 10%;
+    padding: 7%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+} 
+.card:hover {
+    transform: scale(1.2);
+    transition-duration: 400ms;    
+} 
+
+.card p {
+    text-align: justify;
+}
+
+.icon{
+    width: 9vw;
+    align-self: center;
+}
+
+.item-description {
+    line-height: 2;
+    margin-top: 8%;
+}
+
+#description > h2 {
+    text-align: center;
+    font-size: 3rem;
+    padding: 3% 3% 0 3%;
+}
+
+#description > p {
+    font-size: 1.2rem;
+    padding: 2%;
+    text-align: center;
+}
+
+/*---------- mision and vision ----------*/
+
+#mision-vision {
+    background-color: var(--bg-light);
+    padding: 5%;
+}
+
+#mision-vision > h2{    
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 5% ;
+
+}
+
+.cards-mv-container {
+    display: flex;
+    direction: row;
+}
+
+.card-mv {
+    width: 30vw;
+    height: 50vh;
+    text-align: center;
+    margin: auto;    
+}
+
+.card-mv-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all 220ms;
+    transform-style: preserve-3d;
+}
+
+.mision-card-front, .mision-card-back {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    backface-visibility: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 2rem;
+    
+}
+
+.mision-card-back {
+    padding: 10%;
+    line-height: 2rem;
+    background-color: var(--bg-light);
+    transform: rotateY(180deg);
+}
+
+.card-mv:hover .card-mv-inner{
+    transform: rotateY(-180deg);
+}
+
+/*---------- footer ----------*/
+
+footer {
+    background-color:var(--footer-bg-color);
+    color:var(--bg-light);
+}
+
+.grid-footer-container
+{
+    display: grid;
+    grid-template-columns: 0.2fr 3fr 0.2fr 3fr;
+    grid-template-rows: 10fr 8fr 8fr 6fr;
+    padding: 0% 2%;
+}
+
+#contacts h3{
+    padding: 2% 0 0 2%;
+}
+
+#contacts h5 {
+    padding: 1% 0 3% 2% 
+}
+
+.fa-brands:hover, .grid-footer-container p:hover{
+    cursor: pointer;
+}
+
+@media(max-width: 768px) {
+    main {
+        position: absolute;
+        top: 17%;
+        right: 0;
+    }
+    
+    a {
+        text-decoration: none;
+        font-size: 1em;
+        color: var(--dark-tex);
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+    }
+
+    .cards-mv-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-mv {
+        width: 100%;
+        text-align: center;
+        margin: auto;    
+        margin-bottom: 5%;
+    }
+    
+    .card-mv-inner {
+        width: 100%;
+        height: 100%;
+        transition: all 220ms;
+        transform-style: preserve-3d;
+    }
+    
+}
+
+@media(max-width: 639px) {
+    main {
+        position: absolute;
+        top: 14%;
+        right: 0;
+    }
+}
+
+@media(max-width:521px) {
+    nav {
+        position: absolute;
+        z-index: 2;
+        background-color: var(--bg-light);
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 1% 1%;
+        padding: 2%;
+        border-radius: 1em;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 25% 25% 25% 25%;
+    }
+
+    .cards-mv-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    a {
+        text-decoration: none;
+        font-size: 0.8em;
+        color: var(--dark-tex);
+    }
+}
+
+@media(max-width: 425px) {
+    main {
+        position: absolute;
+        top: 10%;
+        right: 0;
+    }
+    
+    .title {
+        font-family: 'Modak';
+        font-size: 10vmax;
+        height: auto;
+        line-height: 0.65em;
+    }
+    
+    .grid-container-header {
+        display: grid; 
+        grid-template-columns: 40vw 55vw;
+        grid-template-rows: 20vw 5vw 6vw 6vw;
+        max-height: 100%;
+      }
+    
+    .item3-header{
+        font-size: 2vmax;
+    }
+    
+    #logo {
+        position:relative; 
+        max-width:70%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    #description > h2 {
+        text-align: center;
+        font-size: 2rem;
+        padding: 3% 3% 0 3%;
+    }
+    
+    #description > p {
+        font-size: 1rem;
+        padding: 3%;
+        text-align: center;
+    }
+    
+    #mision-vision > h2{    
+        font-size: 2rem;
+        text-align: center;
+        padding-bottom: 5% ;
+    
+    }
+    
+    .card-mv {
+        height: 60vh;
+        text-align: center;
+        margin: auto;    
+    }
+}
+
+@media(max-width: 425px) { 
+    main {
+        position: absolute;
+        top: 8%;
+        right: 0;
+    }
+    
+    nav {
+        position: absolute;
+        z-index: 2;
+        background-color: var(--bg-light);
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 1%;
+        border-radius: 1em;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 0.6em;
+        color: var(--dark-tex);
+    }
+
+    #logo {
+        position:relative; 
+        max-width:60%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .title {
+        font-family: 'Modak';
+        font-size: 8vmax;
+        height: auto;
+        line-height: 0.65em;
+    }
+
+    .grid-container-header {
+        display: grid; 
+        grid-template-columns: 40vw 55vw;
+        grid-template-rows: 20vw 6vw 5vw 5vw;
+        max-height: 100%;
+    }
+
+    .item1-header, .item3-header, .item4-header{
+        align-self:flex-start;
+    }
+}

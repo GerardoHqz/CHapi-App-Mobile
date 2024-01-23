@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.tde.chapi.viewmodel.ViewModelConsultation" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/deep_turquoise"
+        tools:context=".AddAppointmentFragment">
+
+        <ImageView
+            android:id="@+id/imageView_LeftBubbles2"
+            android:layout_width="@dimen/layout_width_leftBubbles"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_leftBubbles"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/left_bubbles" />
+
+        <ImageView
+            android:id="@+id/imageView_RightBubbles2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_rightBubbles"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/right_bubbles" />
+
+        <ImageView
+            android:id="@+id/imageView_MiddleBubbles2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_middleBubbles"
+            app:layout_constraintEnd_toStartOf="@+id/imageView_RightBubbles2"
+            app:layout_constraintStart_toEndOf="@+id/imageView_LeftBubbles2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/middle_bubbles" />
+
+        <TextView
+            android:id="@+id/textView_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tiny_gap"
+            android:layout_marginTop="@dimen/tiny_gap"
+            android:text="@string/username"
+            android:fontFamily="@font/kumbhsans"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text_size"
+            app:layout_constraintStart_toEndOf="@+id/imageView_userpp3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_welcome3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tiny_gap"
+            android:text="@string/welcome_message_string"
+            android:fontFamily="@font/kumbhsans"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/imageView_userpp3"
+            app:layout_constraintTop_toBottomOf="@+id/textView_username" />
+
+        <ImageView
+            android:id="@+id/imageView_userpp3"
+            android:layout_width="@dimen/layout_userImage"
+            android:layout_height="@dimen/layout_userImage"
+            android:layout_marginStart="@dimen/small_gap"
+            android:layout_marginTop="@dimen/tiny_gap"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/user_pp" />
+
+        <TextView
+            android:id="@+id/textView_background_addappointment2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/default_gap"
+            android:background="@drawable/background_box"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView_orangespheres"
+            android:layout_width="@dimen/layout_width_Spheres"
+            android:layout_height="@dimen/layout_height_Spheres"
+            android:layout_marginStart="@dimen/sphere_corner_gap"
+            android:layout_marginBottom="@dimen/sphere_corner_gap"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/bluespheres"
+            tools:ignore="ImageContrastCheck" />
+
+        <Button
+            android:id="@+id/btn_action_back_ToAddAppointment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:fontFamily="@font/robotomonosemibold"
+            android:text="@string/back_string"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/default_gap"
+            android:padding="@dimen/default_gap"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp">
+
+            <TextView
+                android:id="@+id/textView_addappointment3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/deep_turquoise"
+                android:text="@string/addappointment_string"
+                android:fontFamily="@font/kumbhsanssemibold"
+                android:textSize="@dimen/large_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_gap"
+                android:text="@string/date_string"
+                android:fontFamily="@font/kumbhsans"
+                android:textColor="@color/deep_turquoise"
+                android:textSize="@dimen/large_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_addappointment3" />
+
+
+            <ImageButton
+                android:id="@+id/btn_action_DatePicker"
+                android:layout_width="@dimen/default_gap"
+                android:layout_height="@dimen/default_gap"
+                android:layout_marginTop="@dimen/small_gap"
+                android:backgroundTint="@color/orange_light"
+                android:contentDescription="@string/date_string"
+                android:src="@drawable/ic_calendar"
+                android:clickable="false"
+                android:focusable="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_date" />
+
+            <EditText
+                android:id="@+id/editText_date"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_gap"
+                android:layout_marginStart="@dimen/default_gap"
+                android:layout_marginTop="@dimen/small_gap"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="@dimen/small_gap"
+                android:ems="10"
+                android:hint="@string/hint_date"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                android:paddingStart="@dimen/small_gap"
+                android:paddingEnd="@dimen/small_gap"
+                android:textColorHint="#757575"
+                android:textSize="@dimen/text_size"
+                android:clickable="false"
+                android:focusable="false"
+                app:layout_constraintStart_toEndOf="@+id/btn_action_DatePicker"
+                app:layout_constraintTop_toBottomOf="@+id/textView_date" />
+
+            <TextView
+                android:id="@+id/textView_hour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/large_gap"
+                android:text="@string/hour_string"
+                android:fontFamily="@font/kumbhsans"
+                android:textColor="@color/deep_turquoise"
+                android:textSize="@dimen/large_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_date" />
+
+            <ImageButton
+                android:id="@+id/btn_action_TimePicker"
+                android:layout_width="@dimen/default_gap"
+                android:layout_height="@dimen/default_gap"
+                android:layout_marginTop="@dimen/small_gap"
+                android:backgroundTint="@color/orange_light"
+                android:contentDescription="@string/hour_string"
+                android:src="@drawable/ic_time"
+                android:clickable="false"
+                android:focusable="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_hour" />
+
+            <EditText
+                android:id="@+id/editText_hour"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_gap"
+                android:layout_marginStart="@dimen/default_gap"
+                android:layout_marginTop="@dimen/small_gap"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="@dimen/small_gap"
+                android:ems="10"
+                android:hint="@string/hint_time"
+                android:importantForAutofill="no"
+                android:inputType="time"
+                android:paddingStart="@dimen/small_gap"
+                android:paddingEnd="@dimen/small_gap"
+                android:textColorHint="#757575"
+                android:textSize="@dimen/text_size"
+                app:layout_constraintStart_toEndOf="@+id/btn_action_TimePicker"
+                app:layout_constraintTop_toBottomOf="@+id/textView_hour"
+                android:clickable="false"
+                android:focusable="false"/>
+
+            <Button
+                android:id="@+id/btn_action_continue_toAddappointment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_gap"
+                android:layout_marginBottom="@dimen/layout_marginBottom_save"
+                android:backgroundTint="@color/orange"
+                android:fontFamily="@font/robotomono"
+                android:text="@string/save_string"
+                android:textColor="#F5F5F5"
+                app:cornerRadius="@dimen/cornerRadius_Button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.333"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

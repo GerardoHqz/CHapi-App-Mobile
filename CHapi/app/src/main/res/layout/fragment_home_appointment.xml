@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/add_appointment"
+        android:layout_height="match_parent"
+        android:background="@color/deep_turquoise">
+
+
+        <ImageView
+            android:id="@+id/imageView_MiddleBubble5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_middleBubbles"
+            app:layout_constraintEnd_toStartOf="@id/imageView_RightBubble5"
+            app:layout_constraintStart_toEndOf="@id/imageView_LeftBubble5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/middle_bubbles" />
+
+        <ImageView
+            android:id="@+id/imageView_RightBubble5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_rightBubbles"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/right_bubbles" />
+
+        <ImageView
+            android:id="@+id/imageView_LeftBubble5"
+            android:layout_width="@dimen/layout_width_leftBubbles"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_leftBubbles"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/left_bubbles" />
+
+        <TextView
+            android:id="@+id/textView_background_apmnt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/default_gap"
+            android:background="@drawable/background_box"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageView_userpp_apmnt"
+            android:layout_width="@dimen/layout_userImage"
+            android:layout_height="@dimen/layout_userImage"
+            android:layout_marginStart="@dimen/small_gap"
+            android:layout_marginTop="@dimen/tiny_gap"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/user_pp" />
+
+        <TextView
+            android:id="@+id/textView_username_apmnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tiny_gap"
+            android:layout_marginTop="@dimen/tiny_gap"
+            android:fontFamily="@font/kumbhsans"
+            android:text="@string/username"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text_size"
+            app:layout_constraintStart_toEndOf="@id/imageView_userpp_apmnt"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_welcome_apmnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tiny_gap"
+            android:text="@string/welcome_message_string"
+            android:fontFamily="@font/kumbhsans"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/imageView_userpp_apmnt"
+            app:layout_constraintTop_toBottomOf="@+id/textView_username_apmnt" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/default_gap"
+            android:padding="@dimen/medium_gap"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="-4dp">
+
+            <TextView
+                android:id="@+id/textView_appointment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_marginTop_text"
+                android:fontFamily="@font/kumbhsans"
+                android:freezesText="false"
+                android:text="@string/appointment_string"
+                android:textColor="@color/deep_turquoise"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/large_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btn_action_addappointment"
+                android:layout_width="@dimen/layout_height_button"
+                android:layout_height="@dimen/layout_height_button"
+                android:layout_marginEnd="@dimen/small_gap"
+                android:layout_marginBottom="@dimen/large_gap"
+                android:background="@drawable/add"
+                android:contentDescription="@string/addappointment_string"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_appointment"
+                android:layout_width="@dimen/layout_width_recyclerview_reminder"
+                android:layout_height="@dimen/layout_height_recyclerview_reminder"
+                android:layout_marginBottom="@dimen/medium_gap"
+                app:layout_constraintBottom_toTopOf="@+id/btn_action_addappointment"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_appointment"
+                app:layout_constraintVertical_bias="0.0"
+                tools:listitem="@layout/appoinment_box">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_gap"
+            android:layout_marginStart="@dimen/small_gap"
+            android:layout_marginEnd="@dimen/small_gap"
+            android:layout_marginBottom="@dimen/medium_gap"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corners" />
+
+            <ImageButton
+                android:id="@+id/btn_action_home_apmnt"
+                android:layout_width="@dimen/icon_home_size"
+                android:layout_height="@dimen/icon_home_size"
+                android:layout_marginStart="@dimen/medium_gap"
+                android:background="@drawable/ic_home"
+                android:backgroundTint="@color/dark_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btn_action_reminder_apmnt"
+                android:layout_width="@dimen/icon_home_size"
+                android:layout_height="@dimen/icon_home_size"
+                android:layout_marginStart="@dimen/icon_home_size"
+                android:background="@drawable/ic_pill"
+                android:backgroundTint="@color/dark_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn_action_home_apmnt"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_action_appointment_reminder"
+                android:layout_width="@dimen/icon_home_size"
+                android:layout_height="@dimen/icon_home_size"
+                android:layout_marginEnd="@dimen/icon_home_size"
+                android:background="@drawable/ic_doctor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_action_emergency_apmnt"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btn_action_emergency_apmnt"
+                android:layout_width="@dimen/icon_home_size"
+                android:layout_height="@dimen/icon_home_size"
+                android:layout_marginEnd="@dimen/medium_gap"
+                android:background="@drawable/ic_siren"
+                android:backgroundTint="@color/dark_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+
+
+
+
+

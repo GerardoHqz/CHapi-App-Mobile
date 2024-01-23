@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/deep_turquoise">
+
+
+        <!-- burbujas superiores -->
+
+        <ImageView
+            android:id="@+id/imageView_MiddleBubble2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_middleBubbles"
+            app:layout_constraintEnd_toStartOf="@id/imageView_RightBubble6"
+            app:layout_constraintStart_toEndOf="@id/imageView_LeftBubble6"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/middle_bubbles" />
+
+        <ImageView
+            android:id="@+id/imageView_LeftBubble6"
+            android:layout_width="@dimen/layout_width_leftBubbles"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_leftBubbles"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/left_bubbles" />
+
+        <ImageView
+            android:id="@+id/imageView_RightBubble6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_rightBubbles"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/right_bubbles" />
+
+        <!-- welcome, usuario e imagen -->
+        <ImageView
+            android:id="@+id/imageView_userpp_configuration"
+            android:layout_width="@dimen/layout_userImage"
+            android:layout_height="@dimen/layout_userImage"
+            android:layout_marginStart="@dimen/small_gap"
+            android:layout_marginTop="@dimen/tiny_gap"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/user_pp" />
+
+        <TextView
+            android:id="@+id/textView_welcome_configuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tiny_gap"
+            android:text="@string/welcome_message_string"
+            android:fontFamily="@font/kumbhsans"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/imageView_userpp_configuration"
+            app:layout_constraintTop_toBottomOf="@+id/textView_username_configuration" />
+
+        <TextView
+            android:id="@+id/textView_username_configuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tiny_gap"
+            android:layout_marginTop="@dimen/tiny_gap"
+            android:text="@string/username"
+            android:fontFamily="@font/kumbhsans"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text_size"
+            app:layout_constraintStart_toEndOf="@id/imageView_userpp_configuration"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_background_configuration"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/default_gap"
+            android:background="@drawable/background_box"
+            android:padding="@dimen/default_gap"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/default_gap"
+            android:padding="@dimen/medium_gap"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp">
+
+
+            <Button
+                android:id="@+id/btn_configurationtext"
+                android:layout_width="@dimen/layout_width_configurationButton"
+                android:layout_height="@dimen/layout_height_configurationButton"
+                android:layout_marginTop="@dimen/layout_marginTop_configurationButton"
+                android:layout_marginEnd="0dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:fontFamily="@font/kumbhsanssemibold"
+                android:text="@string/configuration"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size"
+                app:layout_constraintEnd_toStartOf="@+id/btn_configuration"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btn_configuration"
+                android:layout_width="@dimen/layout_userImage"
+                android:layout_height="@dimen/layout_userImage"
+                android:layout_marginTop="@dimen/layout_marginTop_configurationButton"
+                android:layout_marginEnd="0dp"
+                android:background="@drawable/settings"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btn_emergencycall"
+                android:layout_width="@dimen/layout_width_emergencyButton"
+                android:layout_height="@dimen/layout_height_emergencyButton"
+                android:background="@drawable/button_emergency"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.398" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_gap"
+            android:layout_marginStart="@dimen/small_gap"
+            android:layout_marginEnd="@dimen/small_gap"
+            android:layout_marginBottom="@dimen/medium_gap"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corners" />
+
+            <ImageButton
+                android:id="@+id/btn_action_home_emergency"
+                android:layout_width="@dimen/icon_home_size"
+                android:layout_height="@dimen/icon_home_size"
+                android:layout_marginStart="@dimen/medium_gap"
+                android:background="@drawable/ic_home"
+                android:backgroundTint="@color/dark_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btn_action_reminder_emergency"
+                android:layout_width="@dimen/icon_home_size"
+                android:layout_height="@dimen/icon_home_size"
+                android:layout_marginStart="@dimen/icon_home_size"
+                android:background="@drawable/ic_pill"
+                android:backgroundTint="@color/dark_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn_action_home_emergency"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btn_action_appointment_emergency"
+                android:layout_width="@dimen/icon_home_size"
+                android:layout_height="@dimen/icon_home_size"
+                android:layout_marginEnd="@dimen/icon_home_size"
+                android:background="@drawable/ic_doctor"
+                android:backgroundTint="@color/dark_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView_action_emergency_emergency"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_action_emergency_emergency"
+                android:layout_width="@dimen/icon_home_size"
+                android:layout_height="@dimen/icon_home_size"
+                android:layout_marginEnd="@dimen/medium_gap"
+                android:background="@drawable/ic_siren"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

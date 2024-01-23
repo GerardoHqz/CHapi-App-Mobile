@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/deep_turquoise"
+        tools:context=".UI.Home.Emergency.ConfigurationFragment">
+
+        <ImageView
+            android:id="@+id/imageView_MiddleBubble7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_middleBubbles"
+            app:layout_constraintEnd_toStartOf="@id/imageView_RightBubble7"
+            app:layout_constraintStart_toEndOf="@id/imageView_LeftBubble7"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/middle_bubbles" />
+
+        <ImageView
+            android:id="@+id/imageView_LeftBubble7"
+            android:layout_width="@dimen/layout_width_leftBubbles"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_leftBubbles"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/left_bubbles" />
+
+        <ImageView
+            android:id="@+id/imageView_RightBubble7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop_rightBubbles"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/right_bubbles" />
+
+        <ImageView
+            android:id="@+id/imageView_userpp_configuration2"
+            android:layout_width="@dimen/layout_userImage"
+            android:layout_height="@dimen/layout_userImage"
+            android:layout_marginStart="@dimen/small_gap"
+            android:layout_marginTop="@dimen/tiny_gap"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/user_pp" />
+
+
+        <TextView
+            android:id="@+id/textView_welcome_configuration2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tiny_gap"
+            android:text="@string/welcome_message_string"
+            android:textColor="@color/white"
+            android:fontFamily="@font/kumbhsans"
+            app:layout_constraintStart_toEndOf="@+id/imageView_userpp_configuration2"
+            app:layout_constraintTop_toBottomOf="@+id/textView_username_configuration2" />
+
+
+        <TextView
+            android:id="@+id/textView_username_configuration2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tiny_gap"
+            android:layout_marginTop="@dimen/tiny_gap"
+            android:text="@string/username"
+            android:textColor="@color/white"
+            android:fontFamily="@font/kumbhsans"
+            android:textSize="@dimen/medium_text_size"
+            app:layout_constraintStart_toEndOf="@id/imageView_userpp_configuration2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_background_configuration2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/default_gap"
+            android:background="@drawable/background_box"
+            android:padding="@dimen/default_gap"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView_twospheresorange_configuration2"
+            android:layout_width="@dimen/layout_width_Spheres"
+            android:layout_height="@dimen/layout_height_Spheres"
+            android:layout_margin="@dimen/sphere_corner_gap"
+            android:layout_marginStart="@dimen/sphere_corner_gap"
+            android:layout_marginBottom="@dimen/sphere_corner_gap"
+            android:src="@drawable/orange_spheres2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <Button
+            android:id="@+id/btn_action_cancel_configuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/back_string"
+            android:textColor="@color/black"
+            android:fontFamily="@font/robotomonosemibold"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/default_gap"
+            android:padding="@dimen/medium_gap"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp">
+
+
+            <TextView
+                android:id="@+id/textView_emergencycontact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_gap"
+                android:fontFamily="@font/kumbhsanssemibold"
+                android:freezesText="false"
+                android:text="@string/contact"
+                android:textColor="@color/deep_turquoise"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/large_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.577"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_namecontact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kumbhsans"
+                android:text="@string/contactname"
+                android:textColor="@color/teal_700"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/medium_text_size"
+                app:layout_constraintBottom_toTopOf="@+id/editText_emergencyname"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textView_telephonecontact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/telephonecontact"
+                android:fontFamily="@font/kumbhsans"
+                android:textColor="@color/teal_700"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/medium_text_size"
+                app:layout_constraintBottom_toTopOf="@+id/editText_emergencytelephone"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_emailcontact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:freezesText="false"
+                android:fontFamily="@font/kumbhsans"
+                android:text="@string/emailcontact"
+                android:textColor="@color/teal_700"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/medium_text_size"
+                app:layout_constraintBottom_toTopOf="@+id/editText_emailemegency"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_emailemegency"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_gap"
+                android:layout_marginTop="@dimen/layout_marginTop_emailText"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="@dimen/small_gap"
+                android:inputType="textEmailAddress"
+                android:fontFamily="@font/robotomono"
+                android:paddingStart="@dimen/small_gap"
+                android:paddingEnd="@dimen/small_gap"
+                android:textColorHint="#757575"
+                android:textSize="@dimen/text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_emergencytelephone" />
+
+            <EditText
+                android:id="@+id/editText_emergencyname"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_gap"
+                android:layout_marginTop="@dimen/layout_marginTop_nameText"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="@dimen/small_gap"
+                android:fontFamily="@font/robotomono"
+                android:inputType="text"
+                android:paddingStart="@dimen/small_gap"
+                android:paddingEnd="@dimen/small_gap"
+                android:textSize="@dimen/text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_emergencycontact" />
+
+            <EditText
+                android:id="@+id/editText_emergencytelephone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_gap"
+                android:layout_marginTop="@dimen/medium_gap"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="@dimen/small_gap"
+                android:inputType="phone"
+                android:fontFamily="@font/robotomono"
+                android:paddingStart="@dimen/small_gap"
+                android:paddingEnd="@dimen/small_gap"
+                android:textColorHint="#757575"
+                android:textSize="@dimen/text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_emergencyname"/>
+
+            <Button
+                android:id="@+id/btn_action_save"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_gap"
+                android:layout_marginTop="@dimen/layout_marginTop_buttonEmergency"
+                android:backgroundTint="@color/orange"
+                android:text="@string/save_string"
+                android:fontFamily="@font/robotomono"
+                app:cornerRadius="@dimen/cornerRadius_Button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText_emailemegency" />
+
+            <Button
+                android:id="@+id/btn_action_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_gap"
+                android:backgroundTint="@color/deep_turquoise"
+                android:text="@string/cerrar_sesion"
+                android:fontFamily="@font/robotomono"
+                app:cornerRadius="@dimen/cornerRadius_Button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_action_save" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">CHapi</string>
+
+    <!-- bottom navigation -->
+    <string name="home_string">Inicio</string>
+    <string name="reminder_string">Recordatorios</string>
+    <string name="appointment_string">Consultas</string>
+    <string name="emergency_string">Emergencias</string>
+
+
+    <string name="hint_username_string">Nombre de usuario</string>
+    <string name="hint_password_string">Contraseña</string>
+
+    <string name="hint_email_string">Correo electronico</string>
+    <string name="hint_passwordconfirmation_string">Confirme su contraseña</string>
+    <string name="hint_telephone_string">Número de telefono</string>
+    <string name="hint_answerquestion">Respuesta</string>
+    <string name="hint_verificationcode">Codigo de verificacion</string>
+    <string name="hint_obligatory">(Obligatorio)</string>
+    <string name="hint_optional">(Opcional)</string>
+    <string name="hint_newpassword">Contraseña nueva</string>
+    <string name="hint_confirm_newpassword">Confirmar contraseña</string>
+
+    <string name="hint_date">DD/MM/AA</string>
+    <string name="hint_time">HH:mm</string>
+
+    <string name="textview_forgotpassword_string">He olvidado mi contraseña</string>
+    <string name="insertpassword_string">Ingrese contraseña nueva</string>
+    <string name="login_string">INICIAR SESION</string>
+
+    <string name="confirm_string">CONFIRMAR</string>
+    <string name="next_string">SIGUIENTE</string>
+    <string name="back_string">Regresar</string>
+    <string name="continue_string">CONTINUAR</string>
+    <string name="save_string">GUARDAR</string>
+    <string name="cancelar_string">Cancelar</string>
+    <string name="date_string">Fecha</string>
+    <string name="hour_string">Hora</string>
+
+
+    <string name="textview_createaccoun_string">Crear Cuenta</string>
+    <string name="termsncondition_string">Terminos y condiciones de seguridad</string>
+    <string name="text_sqbox">Codigo de verificacion:</string>
+    <string name="security_question">Ingrese el codigo de verificacion que se ha enviado a su correo</string>
+
+    <!--    Variables que se tienen que cambiar dependiendo del usuario-->
+
+
+    <string name="addappointment_string">Agregar cita</string>
+    <string name="history_string">Registro</string>
+    <string name="placehospital">Hospital / Lugar</string>
+    <string name="address_string">Dirección</string>
+    <string name="medic_string">Médico</string>
+    <string name="each_string">Cada:</string>
+
+    <string name="username">var del username</string>
+    <string name="welcome_message_string">¡Bienvenido a CHapi!</string>
+    <string name="date">var de Fecha</string>
+    <string name="recentpills">Medicamentos proximos</string>
+    <string name="recentappointments">Citas proximas</string>
+    <string name="reminder">Recordatorios</string>
+    <string name="type">Tipo de medicamento</string>
+    <string name="medicine">Nombre del medicamento</string>
+    <string name="medicineamount">Cantidad</string>
+    <string name="startdate">Fecha de inicio</string>
+    <string name="time">Hora</string>
+    <string name="frequency">Frecuencia</string>
+    <string name="contact">Contacto de emergencia</string>
+    <string name="contactname">Nombre</string>
+    <string name="telephonecontact">Telefono</string>
+    <string name="emailcontact">Correo</string>
+    <string name="configuration">Configuración</string>
+
+
+    <string name="pills_string">Pastillas</string>
+    <string name="vaccination_string">Inyección</string>
+    <string name="syrup_string">Jarabe</string>
+    <string name="other_string">Otro tipo</string>
+
+    <string name="tab_string">tab</string>
+    <string name="mg_string">mg</string>
+    <string name="ml_string">ml</string>
+
+    <string name="medicine_name">Selecciona la medicina</string>
+
+
+    <!-- Datos a Mandar -->
+    <string name="medicine_name_reminder">Var de la medicina</string>
+    <string name="amount_reminder">Var de la cantidad</string>
+    <string name="time_reminder">Var del horario</string>
+    <string name="frequency_reminder">Var de la frecuencia</string>
+
+    <string name="doctor_name">Var del doctor</string>
+    <string name="appoinment_name">Var del nombre</string>
+    <string name="time_appoinment">Var del horario</string>
+    <string name="place_appoinment">Var del lugar</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="congratulations">¡ Felicidades !</string>
+    <string name="success">Cuenta creada con éxito,</string>
+    <string name="start">estamos listos para comenzar.</string>
+    <string name="buttomNav_home">Home</string>
+    <string name="bottomNav_pillreminder">Pill Reminder</string>
+    <string name="bottomNav_appointment">Appoinment</string>
+    <string name="bottomNav_emergency">Emergency</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="cerrar_sesion">Cerrar Sesion</string>
+    <string name="hours">Horas</string>
+    <string name="weeks">Semanas</string>
+    <string name="days">Dias</string>
+    <string name="every">Cada:</string>
+    <string name="hint_number">Numero</string>
+    <string name="dose_quantity">Cantidad de dosis</string>
+
+    <string name="tycs">I. OBJETO El objeto es regular el acceso y utilización del contenido, productos y/o servicios a disposición del público en general en el dominio https://www.chapiapp.com El titular se reserva el derecho de realizar cualquier tipo de modificación en el sitio web en cualquier momento y sin previo aviso, el usuario acepta dichas modificaciones.El acceso al sitio web por parte del usuario es libre y gratuito.El sitio web solo admite el acceso a personas mayores de edad y no se hace responsable por el incumplimiento de esto.El sitio web está dirigido a usuarios residentes en El Salvador y cumple con la legislación establecida en dicho país, si el usuario reside en otro país y decide acceder al sitio web lo hará bajo su responsabilidad.La administración del sitio web puede ejercerse por terceros, es decir, personas distintas al titular, sin afectar esto los presentes términos y condiciones.II. USUARIO La actividad del usuario en el sitio web como publicaciones o comentarios estarán sujetos a los presentes términos y condiciones. El usuario se compromete a utilizar el contenido, productos y/o servicios de forma lícita, sin faltar a la moral o al orden público, absteniéndose de realizar cualquier acto que afecte los derechos de terceros o el funcionamiento del sitio web.El usuario se compromete a proporcionar información verídica en los formularios del sitio web.El acceso al sitio web no supone una relación entre el usuario y el titular del sitio web.El usuario se responsabiliza totalmente al ingresar su informacion y historial medico y derivados.El usuario manifiesta ser mayor de edad y contar con la capacidad jurídica de acatar los presentes términos y condiciones.III. ACCESO Y NAVEGACIÓN EN LA APLICACION MOVIL El titular no garantiza la continuidad y disponibilidad del contenido, productos y/o servicios en el sitito web, realizará acciones que fomenten el buen funcionamiento de dicho sitio web sin responsabilidad alguna.El titular no se responsabiliza por accidentes letales, sobredosis o muertes causadas por el software de la aplicacion.El titular no se responsabiliza de que el software esté libre de errores que puedan causar un daño al software y/o hardware del equipo del cual el usuario accede a la aplicacion.De igual forma, no se responsabiliza por los daños causados por el acceso y/o utilización de la aplicacionIV. POLÍTICA DE PRIVACIDAD Y PROTECCIÓN DE DATOS Conforme a lo establecido en la Ley Federal de Protección de Datos Personales en Posesión de Particulares, el titular de compromete a tomar las medidas necesarias que garanticen la seguridad del usuario, evitando que se haga uso indebido de los datos personales que el usuario proporcione en la aplicacion. El titular corroborará que los datos personales contenidos en las bases de datos sean correctos, verídicos y actuales, así como que se utilicen únicamente con el fin con el que fueron recabados. Mil Formatos se reserva el derecho de realizar cualquier tipo de modificación en el Aviso de Privacidad en cualquier momento y sin previo aviso, de acuerdo con sus necesidades o cambios en la legislación aplicable, el usuario acepta dichas modificaciones. El sitio web implica la utilización de cookies que son pequeñas cantidades de información que se almacenan en el navegador utilizado por el usuario como datos de ingreso, preferencias del usuario, fecha y hora en que se accede al sitio web, sitios visitados y dirección IP, esta información es anónima y solo se utilizará para mejorar el sitio web. Los cookies facilitan la navegación y la hacen más amigable, sin embargo, el usuario puede desactivarlos en cualquier momento desde su navegador en el entendido de que esto puede afectar algunas funciones del sitio web. V. POLÍTICA DE ENLACES En el sitio web puede contener enlaces a otros sitios de internet pertenecientes a terceros de los cuales no se hace responsable. VI. POLÍTICA DE PROPIEDAD INTELECTUAL E INDUSTRIAL El titular manifiesta tener los derechos de propiedad intelectual e industrial del sitio web incluyendo imágenes, archivos de audio o video, logotipos, marcas, colores, estructuras, tipografías, diseños y demás elementos que lo distinguen, protegidos por la legislación mexicana e internacional en materia de propiedad intelectual e industrial. El usuario se compromete a respetar los derechos de propiedad industrial e intelectual del titular pudiendo visualizar los elementos del sitio web, almacenarlos, copiarlos e imprimirlos exclusivamente para uso personal. VII. LEGISLACIÓN Y JURISDICCIÓN APLICABLE La relación entre el usuario y el titular se regirá por las legislaciones aplicables en El Salvador. MilFormatos no se responsabiliza por la indebida utilización del contenido, productos y/o servicios del sitio web y del incumplimiento de los presentes términos y condiciones.</string>
+    <string name="description_tyc">El presente contrato describe los términos y condiciones aplicables al uso del contenido, productos y/o servicios de la aplicacion CHapi desarrollada por Tilin Developer Enterprises TDE. Para hacer uso del contenido, productos y/o servicios del sitio web el usuario deberá sujetarse a los presentes términos y condiciones.</string>
+
+
+</resources>

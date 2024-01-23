@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.Login.CreateAccount.ConfirmationAccountFragment">
+
+        <ImageView
+            android:id="@+id/imageView_bluespheres_confirmation"
+            android:layout_width="@dimen/layout_width_orangeSpheres"
+            android:layout_height="@dimen/layout_height_orangeSpheres"
+            android:layout_marginStart="@dimen/sphere_corner_gap"
+            android:layout_marginBottom="@dimen/sphere_corner_gap"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/spheres_blue" />
+
+        <ImageView
+            android:id="@+id/imageView_orangespheres_confirmation"
+            android:layout_width="@dimen/layout_width_orangeSpheres"
+            android:layout_height="@dimen/layout_height_orangeSpheres"
+            android:layout_marginTop="@dimen/sphere_corner_gap"
+            android:layout_marginEnd="@dimen/sphere_corner_gap"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/spheres_orange" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/default_gap"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView_chapi_confirmation"
+                android:layout_width="@dimen/layout_width_chapiHead"
+                android:layout_height="@dimen/layout_height_chapiHead"
+                android:layout_marginTop="@dimen/default_gap"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo_chapi_1" />
+
+            <TextView
+                android:id="@+id/textView_success"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_gap"
+                android:text="@string/success"
+                android:fontFamily="@font/robotomono"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_congratulations" />
+
+            <TextView
+                android:id="@+id/textView_congratulations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_gap"
+                android:freezesText="false"
+                android:text="@string/congratulations"
+                android:fontFamily="@font/kumbhsans"
+                android:textColor="@color/deep_turquoise"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/large_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_chapi_confirmation" />
+
+            <TextView
+                android:id="@+id/textView_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/start"
+                android:textColor="@color/black"
+                android:fontFamily="@font/robotomono"
+                android:textSize="@dimen/text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_success" />
+
+
+            <ImageView
+                android:id="@+id/imageView_confirmation"
+                android:layout_width="@dimen/layout_width_chapiHead"
+                android:layout_height="@dimen/layout_height_chapiHead"
+                android:layout_marginTop="@dimen/medium_gap"
+                android:src="@drawable/confirmation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_start" />
+
+            <Button
+                android:id="@+id/btn_action_continue"
+                android:layout_width="277dp"
+                android:layout_height="@dimen/default_gap"
+                android:layout_marginBottom="@dimen/large_gap"
+                android:backgroundTint="@color/deep_turquoise"
+                android:padding="@dimen/small_gap"
+                android:text="@string/continue_string"
+                app:cornerRadius="@dimen/cornerRadius_Button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

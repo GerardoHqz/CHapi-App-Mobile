@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.tde.chapi.UI.Login.LoginFragment"
+        tools:layout="@layout/fragment_login"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_createAccountFragment"
+            app:destination="@id/createAccountFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_changePassword1Fragment"
+            app:destination="@id/changePassword1Fragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_termsFragment"
+            app:destination="@id/termsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAccountFragment"
+        android:name="com.tde.chapi.UI.Login.CreateAccount.CreateAccountFragment"
+        tools:layout="@layout/fragment_create_account"
+        android:label="CreateAccountFragment" >
+        <action
+            android:id="@+id/action_createAccountFragment_to_confirmationAccountFragment"
+            app:destination="@id/confirmationAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmationAccountFragment"
+        android:name="com.tde.chapi.UI.Login.CreateAccount.ConfirmationAccountFragment"
+        android:label="fragment_confirmation_account"
+        tools:layout="@layout/fragment_confirmation_account" />
+    <fragment
+        android:id="@+id/changePassword1Fragment"
+        android:name="com.tde.chapi.UI.Login.ChangePassword.ChangePassword1Fragment"
+        tools:layout="@layout/fragment_change_password1"
+        android:label="ChangePassword1Fragment" >
+        <action
+            android:id="@+id/action_changePassword1Fragment_to_fragmentChangePassword32"
+            app:destination="@id/fragmentChangePassword32" />
+    </fragment>
+    <fragment
+        android:id="@+id/changePassword2Fragment"
+        android:name="com.tde.chapi.UI.Login.ChangePassword.ChangePassword2Fragment"
+        tools:layout="@layout/fragment_change_password2"
+        android:label="ChangePassword2Fragment" />
+    <fragment
+        android:id="@+id/fragmentChangePassword32"
+        tools:layout="@layout/fragment_change_password3"
+        android:name="com.tde.chapi.UI.Login.ChangePassword.ChangePassword3Fragment"
+        android:label="fragmentChangePassword3" >
+        <action
+            android:id="@+id/action_fragmentChangePassword32_to_changePassword2Fragment"
+            app:destination="@id/changePassword2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/termsFragment"
+        tools:layout="@layout/fragment_terms"
+        android:name="com.tde.chapi.UI.Login.TermsFragment"
+        android:label="TermsFragment" />
+</navigation>

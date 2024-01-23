@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CHapi</string>
+
+    <!-- bottom navigation -->
+    <string name="home_string">Home</string>
+    <string name="reminder_string">Reminders</string>
+    <string name="appointment_string">Appointments</string>
+    <string name="emergency_string">Emergencies</string>
+
+
+    <string name="hint_username_string">Username</string>
+    <string name="hint_password_string">Password</string>
+
+    <string name="hint_email_string">Email</string>
+    <string name="hint_passwordconfirmation_string">Confirm your password</string>
+    <string name="hint_telephone_string">Phone number</string>
+    <string name="hint_answerquestion">Answer</string>
+    <string name="hint_verificationcode">Verification code</string>
+    <string name="hint_obligatory">(Required)</string>
+    <string name="hint_optional">(Optional)</string>
+    <string name="hint_newpassword">New password</string>
+    <string name="hint_confirm_newpassword">Confirm your password</string>
+
+    <string name="hint_date">DD/MM/AA</string>
+    <string name="hint_time">HH:mm</string>
+
+    <string name="textview_forgotpassword_string">I forgot my password</string>
+    <string name="insertpassword_string">Enter new password</string>
+    <string name="login_string">LOG IN</string>
+
+    <string name="confirm_string">CONFIRM</string>
+    <string name="next_string">NEXT</string>
+    <string name="back_string">Return</string>
+    <string name="continue_string">CONTINUE</string>
+    <string name="save_string">SAVE</string>
+    <string name="cancelar_string">Cancel</string>
+    <string name="date_string">Date</string>
+    <string name="hour_string">Hour</string>
+
+
+    <string name="textview_createaccoun_string">Create Account</string>
+    <string name="termsncondition_string">Security terms and conditions</string>
+    <string name="text_sqbox">Verification code:</string>
+    <string name="security_question">Enter the verification code that has been sent to your email</string>
+
+    <!--    Variables que se tienen que cambiar dependiendo del usuario-->
+
+
+    <string name="addappointment_string">Add appointment</string>
+    <string name="history_string">Record</string>
+    <string name="placehospital">Hospital / Place</string>
+    <string name="address_string">Direction</string>
+    <string name="medic_string">Doctor</string>
+    <string name="each_string">Each:</string>
+
+
+    <string name="username">var del username</string>
+    <string name="welcome_message_string">¡Welcome to CHapi!</string>
+    <string name="date">var de Fecha</string>
+    <string name="recentpills">Upcoming Medications</string>
+    <string name="recentappointments">Upcoming Appointments</string>
+    <string name="reminder">Reminders</string>
+    <string name="type">Type of medicine</string>
+    <string name="medicine">Medicine name</string>
+    <string name="medicineamount">Amount</string>
+    <string name="startdate">Start date</string>
+    <string name="time">Hour</string>
+    <string name="frequency">Frequency</string>
+    <string name="contact">Emergency contact</string>
+    <string name="contactname">Name</string>
+    <string name="telephonecontact">Phone</string>
+    <string name="emailcontact">Email</string>
+    <string name="configuration">Setting</string>
+
+
+    <string name="pills_string">Tablets</string>
+    <string name="vaccination_string">Injection</string>
+    <string name="syrup_string">Syrup</string>
+    <string name="other_string">Another type</string>
+
+    <string name="tab_string">tab</string>
+    <string name="mg_string">mg</string>
+    <string name="ml_string">ml</string>
+
+    <string name="medicine_name">Select the medicine</string>
+
+
+    <!-- Datos a Mandar -->
+    <string name="medicine_name_reminder">Var de la medicina</string>
+    <string name="amount_reminder">Var de la cantidad</string>
+    <string name="time_reminder">Var del horario</string>
+    <string name="frequency_reminder">Var de la frecuencia</string>
+
+    <string name="doctor_name">Var del doctor</string>
+    <string name="appoinment_name">Var del nombre</string>
+    <string name="time_appoinment">Var del horario</string>
+    <string name="place_appoinment">Var del lugar</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="congratulations">¡ Congratulations !</string>
+    <string name="success">Account Created successfully,</string>
+    <string name="start">we are ready to start.</string>
+    <string name="buttomNav_home">Home</string>
+    <string name="bottomNav_pillreminder">Pill Reminder</string>
+    <string name="bottomNav_appointment">Appoinment</string>
+    <string name="bottomNav_emergency">Emergency</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="cerrar_sesion">Sign off</string>
+    <string name="hours">Hours</string>
+    <string name="weeks">Weeks</string>
+    <string name="days">Days</string>
+    <string name="every">Each:</string>
+    <string name="hint_number">Number</string>
+    <string name="dose_quantity">Dose Quantity</string>
+
+    <string name="tycs">I. PURPOSE The purpose is to regulate the access and use of the content, products and/or services available to the general public in the domain https://www.chapiapp.com The owner reserves the right to make any type of modification in the website at any time and without prior notice, the user accepts said modifications. Access to the website by the user is free and free. The website only admits access to people of legal age and is not responsible for the breach of this. The website is aimed at users residing in El Salvador and complies with the legislation established in said country, if the user resides in another country and decides to access the website, he will do so under his own responsibility. exercised by third parties, that is, people other than the owner, without affecting these terms and conditions. II. USER User activity on the website such as publications or comments will be subject to these terms and conditions. The user agrees to use the content, products and/or services lawfully, without breaching morality or public order, refraining from any act that affects the rights of third parties or the operation of the website. The user agrees to provide true information in the forms of the website. Access to the website does not imply a relationship between the user and the owner of the website. The user is fully responsible for entering their information and medical history and derivatives. The user declares to be older of age and have the legal capacity to abide by these terms and conditions. III. ACCESS AND NAVIGATION IN THE MOBILE APPLICATION The owner does not guarantee the continuity and availability of the content, products and/or services on the website, it will carry out actions that promote the proper functioning of said website without any responsibility. The owner is not responsible for accidents lethal, overdose or deaths caused by the application software. The owner is not responsible for the software being free of errors that may cause damage to the software and/or hardware of the equipment from which the user accesses the application. form, is not responsible for damages caused by access and / or use of the application IV. PRIVACY POLICY AND DATA PROTECTION In accordance with the provisions of the Federal Law on Protection of Personal Data Held by Private Parties, the owner undertakes to take the necessary measures to guarantee the safety of the user, preventing improper use of the data. information that the user provides in the application. The owner will verify that the personal data contained in the databases are correct, true and current, as well as that they are used only for the purpose for which they were collected. Mil Formats reserves the right to make any type of modification to the Privacy Notice at any time and without prior notice, in accordance with its needs or changes in the applicable legislation, the user accepts said modifications. The website involves the use of cookies that are small amounts of information that are stored in the browser used by the user such as login data, user preferences, date and time the website is accessed, sites visited and IP address, this information is anonymous and will only be used to improve the website. Cookies make browsing easier and more user-friendly, however, the user can deactivate them at any time from their browser with the understanding that this may affect some functions of the website. V. LINKS POLICY The website may contain links to other Internet sites belonging to third parties for which it is not responsible. SAW. INTELLECTUAL AND INDUSTRIAL PROPERTY POLICY The owner declares to have the intellectual and industrial property rights of the website including images, audio or video files, logos, trademarks, colors, structures, fonts, designs and other elements that distinguish it, protected by the Mexican and international legislation on intellectual and industrial property. The user undertakes to respect the industrial and intellectual property rights of the owner, being able to view the elements of the website, store them, copy them and print them exclusively for personal use. VII. APPLICABLE LEGISLATION AND JURISDICTION The relationship between the user and the owner will be governed by the applicable laws in El Salvador. MilFormatos is not responsible for the improper use of the content, products and/or services of the website and for the breach of these terms and conditions.</string>
+    <string name="description_tyc">This contract describes the terms and conditions applicable to the use of the content, products and/or services of the CHapi application developed by Tilin Developer Enterprises TDE. To make use of the content, products and/or services of the website, the user must abide by these terms and conditions.</string>
+
+</resources>
